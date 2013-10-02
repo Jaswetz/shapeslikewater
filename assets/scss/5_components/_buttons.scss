@@ -1,0 +1,25 @@
+/*================================
+=            $Buttons            =
+================================*/
+
+button,
+.btn
+{
+    @extend %btn;
+    @extend %default-trans;
+
+    &,
+    &:hover
+    {
+
+    }
+
+    &:active,
+    &:focus
+    {
+
+    }
+}
+
+
+

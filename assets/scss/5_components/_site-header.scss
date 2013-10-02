@@ -1,0 +1,50 @@
+/*===============================
+=            $Header            =
+===============================*/
+
+$site-header-height-px: ($base-spacing-unit-px * 4);
+$site-header-height: ($base-spacing-unit * 4);
+
+.site-header
+{
+	@extend %fixed-header;
+	height: $site-header-height-px;
+	height: $site-header-height;
+	background: $gray;
+
+	.logo
+	{
+		display: inline-block;
+		float: left;
+		text-align: center;
+
+		@include mq(small-and-up)
+	    {
+			width: 30%;
+			text-align: inherit;
+	    }
+	}
+
+	.nav-wrap
+	{
+		text-align: center;
+
+		@include mq(small-and-up)
+	    {
+			width: 70%;
+			text-align: inherit;
+	    }
+
+		nav
+		{
+			@extend %nav;
+
+			@include mq(small-and-up)
+	    	{
+				float: right;
+			}
+		}
+	}
+}
+
+

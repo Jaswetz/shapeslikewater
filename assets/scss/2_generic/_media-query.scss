@@ -1,0 +1,46 @@
+/*=====================================
+=            $Screen Sizes            =
+=====================================*/
+
+$large     : 1441 !default;
+$big       : 1279 !default;
+$med       : 768 !default;
+$small     : 468 !default;
+$landscape : landscape !important;
+$portrait  : portrait !important;
+
+
+/*==========================================
+=            $Media Query Mixin            =
+==========================================*/
+// per: http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+
+@mixin calc-mq($point, $IE9: false, $query1: min, $query2: width) {
+    @if $IE9 == true{
+        .lt-ie9 & {
+            @content;
+        }
+        @media screen and (#{$query1}-#{$query2}: $point / $font-base + em) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (#{$query1}-#{$query2}: $point / $font-base + em) {
+            @content;
+        }
+    }
+}
+
+
+@mixin mq($media)
+{
+    @if $media == small-and-down
+        { @include calc-mq($small, false, max) { @content; } }
+   @if $media == small-and-up
+        { @include calc-mq($small, true, min) { @content; } }
+    @if $media == med-and-down
+        { @include calc-mq($med, false, max) { @content; } }
+    @if $media == med-and-up
+        { @include calc-mq($med, true, min) { @content; } }
+}

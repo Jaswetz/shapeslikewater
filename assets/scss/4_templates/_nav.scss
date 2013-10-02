@@ -1,0 +1,72 @@
+/*===================================
+=            $Navigation            =
+===================================*/
+
+
+/*==========  Nav abstraction - http://goo.gl/QjtO6  ==========*/
+@mixin obj-nav
+{
+	margin-left: 0;
+	list-style: none;
+
+	> li
+	{
+		&,
+		> a
+		{
+			display: inline-block;;
+			*display: inline;
+			zoom:1;
+		}
+	}
+}
+
+%nav { @include obj-nav; }
+
+
+/*==========  Divided nav abstraction (extends .nav)  ==========*/
+@mixin obj-nav-divided
+{
+	margin-left: -1em;
+
+	> li
+	{
+		border-left: 2px solid #ccc;
+		padding: .5em 1em;
+
+		&:first-child { border-left: none }
+	}
+}
+
+%nav-divided { @include obj-nav-divided }
+
+
+/*==========  Blocked nav abstraction (extends .nav)  ==========*/
+@mixin obj-nav-block
+{
+	li > a
+	{
+		display: block;
+		padding: ($base-spacing-unit * .5) ($base-spacing-unit ) ($base-spacing-unit * .5) ($base-spacing-unit );
+	}
+}
+
+%nav-block { @include obj-nav-block }
+
+
+/*==========  Stacked nav abstraction (extends .nav)  ==========*/
+@mixin obj-nav-stacked
+{
+	> li
+	{
+		display: list-item;
+
+		> a
+		{
+			display: block;
+		}
+	}
+}
+
+%nav-stacked { @include obj-nav-stacked }
+

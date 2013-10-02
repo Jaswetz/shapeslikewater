@@ -1,0 +1,32 @@
+/*================================
+=            Sections            =
+================================*/
+
+@mixin section-spacing
+{
+	margin-bottom: $base-spacing-unit-px * 2;
+	margin-bottom: $base-spacing-unit * 2;
+}
+
+.about,
+.skills,
+.masthead
+{
+	@include section-spacing;
+}
+
+.masthead
+{
+	@include mq(med-and-up)
+    {
+		@include section-spacing;
+    }
+}
+
+.skills > div
+{
+	@include mq(med-and-down)
+    {
+		@include section-spacing;
+    }
+}

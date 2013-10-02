@@ -1,0 +1,35 @@
+/*===============================
+=            $Island            =
+===============================*/
+
+/**
+ * Blocked out content
+ */
+%island,
+%islet
+{
+    display:block;
+    @extend %cf;
+}
+
+%island
+{
+    margin: $base-spacing-unit-px;
+    margin: $base-spacing-unit;
+
+    & > :last-child,
+    & > :last-child
+    {
+        margin-bottom:0;
+    }
+}
+
+
+/**
+ * Just like `.island`, only smaller.
+ */
+%islet
+{
+    margin: $half-spacing-unit-px;
+    margin: $half-spacing-unit;
+}

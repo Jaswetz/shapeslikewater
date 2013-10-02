@@ -1,0 +1,17 @@
+/*==========================================
+=            Calculate Elements            =
+==========================================*/
+
+
+/*==========  Calculate Em from PX  ==========*/
+@function pxtoem($px, $base: $base-font-size)
+{
+    @return ($px / $base) * 1em;
+}
+
+
+/*==========  Calculate PX from EM  ==========*/
+@function emtopx($em, $base: $base-font-size)
+{
+        @return ($em * $base) + 0px;
+}

@@ -1,0 +1,12 @@
+//the serif boolean var can be redeclared from another stylesheet. However
+//the var must be placed after your @import "typeplate.scss";
+$serif-boolean: true !default;
+
+@mixin base-type($weight, $line-height, $font-size, $font-family...) {
+	@if $serif-boolean {
+		font: $weight #{$font-size}%/#{$line-height} $font-family;
+	}@else {
+		font: $weight #{$font-size}%/#{$line-height} $font-family-sans;
+	}
+}
+

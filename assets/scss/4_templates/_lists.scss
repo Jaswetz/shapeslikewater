@@ -1,0 +1,48 @@
+.list
+{
+	margin: 0;	padding: 0;
+	list-style: none;
+
+	li
+	{
+		margin-bottom: $base-spacing-unit-px;
+		margin-bottom: $base-spacing-unit;
+		display: table;
+		border-collapse: collapse;
+		width: 100%
+	}
+
+	.inner
+	{
+		display: table-row;
+		overflow: hidden;
+	}
+
+	.li-img
+	{
+		display: table-cell;
+		vertical-align: middle;
+		width: 30%;
+
+		img
+		{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.li-text
+		{
+			display: table-cell;
+			vertical-align: middle;
+			width: 70%;
+		}
+		h4.li-head,
+		p.li-sub
+		{
+		  margin: 0;
+		  font-size: .5em;
+		}
+	}
+
+}

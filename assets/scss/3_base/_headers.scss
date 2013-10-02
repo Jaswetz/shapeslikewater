@@ -1,0 +1,39 @@
+// styles for all headings, in the style of @csswizardry
+%hN
+{
+	// voodoo to enable ligatures and kerning
+	text-rendering: optimizeLegibility;
+	// this fixes huge spaces when a heading wraps onto two lines
+	line-height: 1;
+	margin-top: 0;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: Gill Sans, Helvetica, Arial, sans-serif;
+	color: $heading-color;
+}
+
+
+// associate h1-h6 tags with their appropriate greek heading
+h1
+{
+	@extend .gamma;
+	@extend %hN;
+}
+
+h2
+{
+	@extend .delta;
+	@extend %hN;
+}
+
+h3
+{
+	@extend .epsilon;
+	@extend %hN;
+}
+
+h4
+{
+	@extend .zeta;
+	@extend %hN;
+}

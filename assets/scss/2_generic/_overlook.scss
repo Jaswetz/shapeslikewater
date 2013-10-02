@@ -1,0 +1,19 @@
+@if $overlook == true
+{
+	.overlook
+	{
+		background: whiteSmoke;
+	}
+
+	.overlook-label
+	{
+		padding: 5px;
+		border-radius: 5px;
+		background: gray;
+		font-size: 18px;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+}/* endif */

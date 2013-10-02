@@ -1,0 +1,24 @@
+/*=============================
+=            $Home            =
+=============================*/
+
+/*==========  About  ==========*/
+
+.about img
+{
+	@extend %push--bottom;
+}
+
+
+/*==========  Skills  ==========*/
+
+.skills img
+{
+	@extend %block-center;
+	@extend %push--bottom;
+}
+
+
+
+
+

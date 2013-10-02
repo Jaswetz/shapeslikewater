@@ -1,0 +1,118 @@
+$button-bg-color: $b-color;
+$button-color: $b-color;
+$button-border-color: $b-dim;
+$button-border-width: 2px;
+$button-border-style: solid;
+$button-font-color : $gray-dark;
+
+$button-focus-bg-color: $b-highlight;
+$button-focus-border-color: $b-color;
+
+/*================================
+=            $Buttons            =
+================================*/
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+%btn
+{
+    display:inline-block;       /* [1] */
+    margin:0;                   /* [6] */
+    padding-top:   0;           /* [6] */
+    padding-right:$base-spacing-unit-px;          /* [7] */
+    padding-right:$base-spacing-unit;          /* [7] */
+    padding-bottom: 0;                          /* [6] */
+    padding-left:$base-spacing-unit-px;            /* [7] */
+    padding-left:$base-spacing-unit;
+    border:none;                /* [6] */
+    vertical-align:middle;      /* [2] */
+    white-space:nowrap;         /* [3] */
+
+    border: $button-border-width $button-border-style $button-border-color;
+    color: $button-font-color;
+    background: $button-color;
+
+    font-size:100%;             /* [4] */
+    font-family:inherit;        /* [4] */
+    line-height: 2;              /* [7] */
+    cursor:pointer;             /* [5] */            /* [7] */
+
+    &,
+    &:hover
+    {
+        text-decoration:none;   /* [9] */
+    }
+
+    &:active,
+    &:focus
+    {
+        outline:none;
+    }
+
+    &:hover,
+    &:focus
+    {
+        border-color: $button-focus-border-color;
+        background: $button-focus-border-color;
+        color: $white;
+    }
+}
+
+
+/*==========  Sizes  ==========*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+%btn--small
+{
+    padding-right:$half-spacing-unit-px;
+    padding-right:$half-spacing-unit;
+    padding-left:$half-spacing-unit-px;
+    padding-left:$half-spacing-unit;
+    line-height:2;
+}
+
+%btn--large
+{
+    padding-right:$base-spacing-unit-px * 1.5;
+    padding-right:$base-spacing-unit * 1.5;
+    padding-left:$base-spacing-unit-px * 1.5;
+    padding-left:$base-spacing-unit * 1.5;
+    line-height:4;
+}
+
+%btn--huge
+{
+    padding-right:$base-spacing-unit-px * 2;
+    padding-right:$base-spacing-unit * 2;
+    padding-left:$base-spacing-unit-px * 2;
+    padding-left:$base-spacing-unit * 2;
+    line-height:5;
+}
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+%btn--full
+{
+    padding-right:0;            /* [1] */
+    padding-left: 0;            /* [1] */
+    width:100%;
+    text-align:center;
+}

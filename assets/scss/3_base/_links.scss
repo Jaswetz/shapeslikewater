@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus
+{
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover
+{
+    outline: 0;
+}
+
+/**
+*
+* 1. Remove default underline
+* 2. A better default blue
+* 3. Increase the clickable area on links
+* 	 : http://joshnh.com/2012/09/06/increasing-the-clickable-area-of-inline-links/
+* 4. Add transform for nicesness
+*
+**/
+
+a
+{
+    text-decoration: none; /* 1 */
+    color: $link-color; /* 2 */
+    position: relative; /* 3 */
+    padding: .1rem; /* 3 */
+    margin: -.1rem; /* 3 */
+    @extend %default-trans;
+
+	&:hover
+	{
+		color: $link-hover;
+        cursor: pointer;
+	}
+}

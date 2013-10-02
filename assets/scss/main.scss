@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+
+/*================================
+=            $Imports            =
+================================*/
+
+
+/*==========  Settings  ==========*/
+// Defualt Settings
+@import "3_base/base-settings";
+// App specific and override settings
+@import "app-settings"; // Variables
+
+/*==========  Vendors  ==========*/
+// Includes fonts, gems, and any similar extensions
+
+@import "1_vendors/foundation-grid";
+@import "1_vendors/fonts"; // Importing web fonts or Icons //
+@import "1_vendors/typeplate-baseType";
+@import "1_vendors/typeplate-headings";
+@import "compass";
+// @import "susy";
+
+/*==========  Generic  ==========*/
+// Helper Mixins
+
+@import "2_generic/calc-elem";
+@import "2_generic/helper";
+@import "2_generic/clearfix";
+@import "2_generic/media-query";
+@import "2_generic/accessibility";
+@import "2_generic/transitions";
+@import "2_generic/glowing-effect";
+
+
+/*==========  Base  ==========*/
+
+@import "3_base/reset";
+@import "3_base/normalize-mod"; // Took out what I didn't need
+@import "3_base/type";
+@import "3_base/p";
+@import "3_base/headers";
+@import "3_base/images";
+@import "3_base/links";
+@import "3_base/lists";
+
+
+/*==========  Templates  ==========*/
+// Reusable base patterns
+
+@import "4_templates/word-wrap";
+@import "4_templates/island";
+@import "4_templates/well";
+@import "4_templates/nav";
+@import "4_templates/buttons";
+@import "4_templates/lists";
+@import "4_templates/fixed-header";
+
+
+/*==========  Components  ==========*/
+
+@import "5_components/site-header";
+@import "5_components/site-footer";
+@import "5_components/masthead";
+@import "5_components/home";
+@import "5_components/section";

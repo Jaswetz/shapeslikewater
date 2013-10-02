@@ -1,0 +1,27 @@
+/*===============================
+=            $Island            =
+===============================*/
+
+/**
+ * Blocked out content
+ */
+%well
+{
+    display:block;
+    @extend %cf;
+}
+
+%well
+{
+    margin: $half-spacing-unit-px;
+    margin: $half-spacing-unit;
+    padding: $half-spacing-unit-px;
+    padding: $half-spacing-unit;
+
+    & > :last-child,
+    & > :last-child
+    {
+        margin-bottom:0;
+    }
+}
+

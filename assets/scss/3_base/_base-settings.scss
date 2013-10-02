@@ -1,0 +1,142 @@
+/*===============================
+=            $Colors            =
+===============================*/
+
+// Grays
+$black						: rgb(0,0,0) ;
+$gray-darker				: lighten($black, 13%) ;
+$gray-dark					: lighten($black, 27%) ;
+$gray 						: lighten($black, 50%) ;
+$gray-light 				: lighten($black, 73%) ;
+$gray-lighter				: lighten($black, 90%) ;
+$white						: rgb(255,255,255) ;
+
+// Colors
+$red 						: #e35d5b ;
+$orange 					: #e8632c ;
+$yellow 					: #e8b000 ;
+$green 						: #b1cc00 ;
+$cyan						: #0e93a9 ;
+$cyanDark					: #074655 ;
+$blue 						: #4ca2df ;
+$blueLight					: #0caad7 ;
+$violet 					: #9094d3 ;
+$magenta 					: #dc609c ;
+
+// Transparents
+$white-vhigh   				: transparentize($white, .90) ;
+$white-high			    	: transparentize($white, .70) ;
+$white-med					: transparentize($white, .50) ;
+$white-low		            : transparentize($white, .30) ;
+$white-vlow			        : transparentize($white, .10) ;
+
+$black-vhigh   	 			: transparentize($black, .90) ;
+$black-high		 			: transparentize($black, .70) ;
+$black-med		 			: transparentize($black, .50) ;
+$black-low		 			: transparentize($black, .30) ;
+$black-vlow		 			: transparentize($black, .10) ;
+
+// Color Scheme
+$b-color              		: $blue ;
+$b-highlight 				: tint($b-color, 30%) ;
+$b-dim 						: shade($b-color, 20%) ;
+
+// Text Highlight
+$highlight-text-color       : tint($b-color, 80%);;
+$highlight-color            : $b-color;
+
+// Text
+$body-copy-color: $gray-dark;
+$heading-color: $gray-darker;
+
+// Links
+$link-color		    		: $blue ;
+$link-accent				: tint($link-color, 30%) ;
+$link-hover 				: darken($link-color, 10) ;
+$link-visited   			: $link-color ;
+$link-focus					: darken($link-visited, 10) ;
+
+
+/*===============================
+=            $Shadow            =
+===============================*/
+
+$default-box-shadow-color 	: rgba(51,51,51,.2);
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur	: 8px;
+$default-box-shadow-spread 	: false;
+$default-box-shadow-inset	: false;
+
+
+/*===============================
+=            $Border            =
+===============================*/
+
+$border-width               : .2em;
+$border-style               : solid;
+$border-color               : $b-color;
+$default-border-radius		: .5rem;
+
+
+/*==============================
+=            $Debug            =
+==============================*/
+
+$debug-mode: false!default;
+$overlook: false!default;
+
+
+/*=============================
+=            $Type            =
+=============================*/
+
+/*==========  Typekit Settings  ==========*/
+$weight: normal;
+$line-height: 1.65;
+$font-size: 112.5; // percentage value (16 * 112.5% = 18px)
+$font-base: 16 * ($font-size/100); // converts our percentage to a pixel value
+$font-family: serif;
+$font-family-sans: sans-serif;
+$font-properties: $weight, $line-height, $font-size, $font-family;
+
+// Paragraphs
+$indent-val: 1.5em !default;
+
+/**
+ * Base size and height
+ */
+$base-font-size:   $font-base + 0px;
+$base-line-height:  ($font-base * $line-height) + 0px;
+
+$text-shadow-color: rgba(57,57,57,0.2);
+
+$body-font-family: sans-serif;
+
+
+/*=================================
+=            $Baseline            =
+=================================*/
+
+/**
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: 1.65rem;
+$base-spacing-unit-px: $base-font-size;
+$half-spacing-unit: $base-spacing-unit / 2;
+$half-spacing-unit-px: $base-spacing-unit-px / 2;
+
+
+/*================================
+=            $Z-index            =
+================================*/
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$z-drpDwn					: 1000 ;
+$zindexPopover				: 1010 ;
+$zindexTooltip				: 1020 ;
+$zindexFixedNavbar			: 1030 ;
+$zindexModalBackdrop		: 1040 ;
+$zindexModal 				: 1050 ;
