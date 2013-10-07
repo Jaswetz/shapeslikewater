@@ -1,3 +1,30 @@
-/*==============================
-=            $Brand            =
-==============================*/
+/*=============================
+=            $Type            =
+=============================*/
+
+$body-font-family: sans-serif;
+$header-font-family: 'audimatbold';
+
+/*===============================
+=            $Colors            =
+===============================*/
+
+// Color Scheme
+$b-color              		: tomato ;
+$b-highlight 				: tint($b-color, 30%) ;
+$b-dim 						: shade($b-color, 20%) ;
+
+// Text Highlight
+$highlight-text-color       : tint($b-color, 80%);;
+$highlight-color            : $b-color;
+
+// Text
+$body-copy-color: $gray-dark;
+$heading-color: $gray-darker;
+
+// Links
+$link-color		    		: $blue ;
+$link-accent				: tint($link-color, 30%) ;
+$link-hover 				: darken($link-color, 10) ;
+$link-visited   			: $link-color ;
+$link-focus					: darken($link-visited, 10) ;

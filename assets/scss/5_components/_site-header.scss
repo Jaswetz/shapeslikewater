@@ -39,9 +39,16 @@ $site-header-height: ($base-spacing-unit * 4);
 		{
 			@extend %nav;
 
+			li > a
+			{
+				display: block;
+				padding: ($base-spacing-unit * .1) ($base-spacing-unit * .5 ) ($base-spacing-unit * .1) ($base-spacing-unit * .5 );
+			}
+
 			@include mq(small-and-up)
 	    	{
 				float: right;
+				padding: ($base-spacing-unit * .5) ($base-spacing-unit * .5 ) ($base-spacing-unit * .5) ($base-spacing-unit * .5 );
 			}
 		}
 	}

@@ -4,7 +4,7 @@
 
 $large     : 1441 !default;
 $big       : 1279 !default;
-$med       : 768 !default;
+$med       : 900 !default;
 $small     : 468 !default;
 $landscape : landscape !important;
 $portrait  : portrait !important;
@@ -41,6 +41,8 @@ $portrait  : portrait !important;
         { @include calc-mq($small, true, min) { @content; } }
     @if $media == med-and-down
         { @include calc-mq($med, false, max) { @content; } }
+    @if $media == med-and-up
+        { @include calc-mq($med, true, min) { @content; } }
     @if $media == med-and-up
         { @include calc-mq($med, true, min) { @content; } }
 }
