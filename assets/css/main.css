@@ -3860,10 +3860,9 @@ body {
 =            $Footer            =
 ===============================*/
 /*=================================
-=            $Masthead            =
+=            $hero            =
 =================================*/
-.masthead,
-.slider {
+.hero {
   margin-top: 72px;
   margin-top: 6.6rem;
   padding-top: 36px;
@@ -3876,119 +3875,189 @@ body {
   background-size: cover;
   background-color: tomato;
 }
+.hero h2 {
+  color: white;
+  font-size: 3.3rem;
+}
+
 @media screen and (max-width: 26em) {
-  .masthead,
-  .slider {
+  .hero--home {
     padding-top: 18px;
     padding-top: 1.65rem;
   }
 }
-.lt-ie9 .masthead, .lt-ie9
-.slider {
-  background-image: url(../../assets/img/img_masthead--med.jpg);
+.lt-ie9 .hero--home {
+  background-image: url(../../assets/img/img_hero-home--med.jpg);
 }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  .lt-ie9 .masthead, .lt-ie9
-  .slider {
-    background-image: url(../../assets/img/img_masthead--med@2x.jpg);
+  .lt-ie9 .hero--home {
+    background-image: url(../../assets/img/img_hero-home--med@2x.jpg);
   }
 }
 @media screen and (min-width: 26em) {
-  .masthead,
-  .slider {
-    background-image: url(../../assets/img/img_masthead--med.jpg);
+  .hero--home {
+    background-image: url(../../assets/img/img_hero-home--med.jpg);
   }
 }
 @media only screen and (min-width: 26em) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 26em) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 26em) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 26em) and (min-device-pixel-ratio: 1.5) {
-  .masthead,
-  .slider {
-    background-image: url(../../assets/img/img_masthead--med@2x.jpg);
+  .hero--home {
+    background-image: url(../../assets/img/img_hero-home--med@2x.jpg);
   }
 }
-.lt-ie9 .masthead, .lt-ie9
-.slider {
-  background-image: url(../../assets/img/img_masthead.jpg);
+.lt-ie9 .hero--home {
+  background-image: url(../../assets/img/img_hero-home.jpg);
   background-position: 50% 100%;
 }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  .lt-ie9 .masthead, .lt-ie9
-  .slider {
-    background-image: url(../../assets/img/img_masthead@2x.jpg);
+  .lt-ie9 .hero--home {
+    background-image: url(../../assets/img/img_hero-home@2x.jpg);
   }
 }
 @media screen and (min-width: 50em) {
-  .masthead,
-  .slider {
-    background-image: url(../../assets/img/img_masthead.jpg);
+  .hero--home {
+    background-image: url(../../assets/img/img_hero-home.jpg);
     background-position: 50% 100%;
   }
 }
 @media only screen and (min-width: 50em) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 50em) and (min-device-pixel-ratio: 1.5) {
-  .masthead,
-  .slider {
-    background-image: url(../../assets/img/img_masthead@2x.jpg);
+  .hero--home {
+    background-image: url(../../assets/img/img_hero-home@2x.jpg);
   }
 }
-.lt-ie9 .masthead, .lt-ie9
-.slider {
-  background-image: url(../../assets/img/img_masthead.jpg);
+.lt-ie9 .hero--home {
+  background-image: url(../../assets/img/img_hero-home.jpg);
   background-position: 50% 100%;
 }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  .lt-ie9 .masthead, .lt-ie9
-  .slider {
-    background-image: url(../../assets/img/img_masthead@2x.jpg);
+  .lt-ie9 .hero--home {
+    background-image: url(../../assets/img/img_hero-home@2x.jpg);
   }
 }
 @media screen and (min-width: 50em) {
-  .masthead,
-  .slider {
-    background-image: url(../../assets/img/img_masthead.jpg);
+  .hero--home {
+    background-image: url(../../assets/img/img_hero-home.jpg);
     background-position: 50% 100%;
   }
 }
 @media only screen and (min-width: 50em) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 50em) and (min-device-pixel-ratio: 1.5) {
-  .masthead,
-  .slider {
-    background-image: url(../../assets/img/img_masthead@2x.jpg);
+  .hero--home {
+    background-image: url(../../assets/img/img_hero-home@2x.jpg);
   }
 }
-.masthead h2,
-.masthead em,
-.slider h2,
-.slider em {
+.hero--home h2,
+.hero--home em {
   display: block;
   margin: 0 auto;
   max-width: 432px;
   max-width: 39.6rem;
-  color: white;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 50em) {
-  .masthead h2,
-  .masthead em,
-  .slider h2,
-  .slider em {
+  .hero--home h2,
+  .hero--home em {
     text-align: center;
   }
 }
-.masthead h2,
-.slider h2 {
+.hero--home h2 {
   margin-bottom: 9px;
   margin-bottom: 0.825rem;
   color: tomato;
-  font-size: 3.3rem;
 }
 @media screen and (max-width: 26em) {
-  .masthead h2,
-  .slider h2 {
+  .hero--home h2 {
     color: white;
   }
 }
 @media screen and (max-width: 50em) {
-  .masthead h2,
-  .slider h2 {
+  .hero--home h2 {
     font-size: 2.475rem;
+  }
+}
+
+.lt-ie9 .hero--portfolio {
+  background-image: url(../../assets/img/img_hero-portfolio--med.jpg);
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  .lt-ie9 .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio--med@2x.jpg);
+  }
+}
+@media screen and (min-width: 26em) {
+  .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio--med.jpg);
+  }
+}
+@media only screen and (min-width: 26em) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 26em) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 26em) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 26em) and (min-device-pixel-ratio: 1.5) {
+  .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio--med@2x.jpg);
+  }
+}
+.lt-ie9 .hero--portfolio {
+  background-image: url(../../assets/img/img_hero-portfolio.jpg);
+  background-position: 50% 100%;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  .lt-ie9 .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio@2x.jpg);
+  }
+}
+@media screen and (min-width: 50em) {
+  .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio.jpg);
+    background-position: 50% 100%;
+  }
+}
+@media only screen and (min-width: 50em) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 50em) and (min-device-pixel-ratio: 1.5) {
+  .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio@2x.jpg);
+  }
+}
+.lt-ie9 .hero--portfolio {
+  background-image: url(../../assets/img/img_hero-portfolio.jpg);
+  background-position: 50% 100%;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  .lt-ie9 .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio@2x.jpg);
+  }
+}
+@media screen and (min-width: 50em) {
+  .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio.jpg);
+    background-position: 50% 100%;
+  }
+}
+@media only screen and (min-width: 50em) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 50em) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 50em) and (min-device-pixel-ratio: 1.5) {
+  .hero--portfolio {
+    background-image: url(../../assets/img/img_hero-portfolio@2x.jpg);
+  }
+}
+@media screen and (max-width: 26em) {
+  .hero--portfolio {
+    height: 108px;
+    height: 9.9rem;
+  }
+}
+.hero--portfolio h2 {
+  margin-left: 18px;
+  margin-left: 1.65rem;
+}
+.lt-ie9 .hero--portfolio h2 {
+  display: block;
+  max-width: 153px;
+  max-width: 14.025rem;
+  padding-left: 3.6px;
+  padding-left: 0.33rem;
+  background-color: tomato;
+}
+@media screen and (min-width: 26em) {
+  .hero--portfolio h2 {
+    display: block;
+    max-width: 153px;
+    max-width: 14.025rem;
+    padding-left: 3.6px;
+    padding-left: 0.33rem;
+    background-color: tomato;
   }
 }
 
@@ -4002,7 +4071,7 @@ body {
 ================================*/
 .about,
 .skills,
-.masthead {
+.hero {
   margin-bottom: 36px;
   margin-bottom: 3.3rem;
 }

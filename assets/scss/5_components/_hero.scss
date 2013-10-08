@@ -1,0 +1,144 @@
+/*=================================
+=            $hero            =
+=================================*/
+
+.hero
+{
+	margin-top: $site-header-height-px;
+	margin-top: $site-header-height;
+	padding-top: $base-spacing-unit-px * 2;
+	padding-top: $base-spacing-unit * 2;
+	width: 100%;
+	height: 275px;
+	@include background-size(cover);
+	background-color: $b-color;
+
+	h2
+	{
+		color: $white;
+		font-size: $base-spacing-unit * 2;
+	}
+}
+
+.hero--home
+{
+	@include mq(small-and-down)
+	{
+		padding-top: $base-spacing-unit-px;
+		padding-top: $base-spacing-unit;
+	}
+
+	@include mq(small-and-up)
+	{
+		background-image: url(../../assets/img/img_hero-home--med.jpg);
+
+		@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+		only screen and (-moz-min-device-pixel-ratio: 1.5),
+		only screen and (-o-min-device-pixel-ratio: 3/2),
+		only screen and (min-device-pixel-ratio: 1.5)
+		{
+			background-image: url(../../assets/img/img_hero-home--med@2x.jpg);
+		}
+	}
+
+	@include mq(med-and-up)
+	{
+		background-image: url(../../assets/img/img_hero-home.jpg);
+		background-position: 50% 100%;
+
+		@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+		only screen and (-moz-min-device-pixel-ratio: 1.5),
+		only screen and (-o-min-device-pixel-ratio: 3/2),
+		only screen and (min-device-pixel-ratio: 1.5)
+		{
+			background-image: url(../../assets/img/img_hero-home@2x.jpg);
+		}
+	}
+
+	h2,
+	em
+	{
+		display: block;
+		margin: 0 auto;
+		max-width: $base-spacing-unit-px * 24;
+		max-width: $base-spacing-unit * 24;
+		@include single-text-shadow(0, 2px, 5px, $default-text-shadow-spread, rgba(0,0,0,0.5));
+
+		@include mq(med-and-down)
+		{
+			text-align: center;
+		}
+	}
+
+	h2
+	{
+		margin-bottom: $base-spacing-unit-px * .5;
+		margin-bottom: $base-spacing-unit * .5;
+		color: $b-color;
+
+		@include mq(small-and-down)
+		{
+			color: $white;
+		}
+
+		@include mq(med-and-down)
+		{
+			font-size: $base-spacing-unit * 1.5;
+		}
+
+	}
+}
+
+.hero--portfolio
+{
+	@include mq(small-and-up)
+	{
+		background-image: url(../../assets/img/img_hero-portfolio--med.jpg);
+
+		@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+		only screen and (-moz-min-device-pixel-ratio: 1.5),
+		only screen and (-o-min-device-pixel-ratio: 3/2),
+		only screen and (min-device-pixel-ratio: 1.5)
+		{
+			background-image: url(../../assets/img/img_hero-portfolio--med@2x.jpg);
+		}
+	}
+
+	@include mq(med-and-up)
+	{
+		background-image: url(../../assets/img/img_hero-portfolio.jpg);
+		background-position: 50% 100%;
+
+		@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+		only screen and (-moz-min-device-pixel-ratio: 1.5),
+		only screen and (-o-min-device-pixel-ratio: 3/2),
+		only screen and (min-device-pixel-ratio: 1.5)
+		{
+			background-image: url(../../assets/img/img_hero-portfolio@2x.jpg);
+		}
+	}
+
+	@include mq(small-and-down)
+	{
+		height: $base-spacing-unit-px * 6;
+		height: $base-spacing-unit * 6;
+	}
+
+	h2
+	{
+		margin-left: $base-spacing-unit-px;
+		margin-left: $base-spacing-unit;
+
+		@include mq(small-and-up)
+		{
+			display: block;
+			max-width: $base-spacing-unit-px * 8.5;
+			max-width: $base-spacing-unit * 8.5;
+			padding-left: $base-spacing-unit-px * .2;
+			padding-left: $base-spacing-unit * .2;
+			background-color: $b-color;
+		}
+	}
+}
+
+
