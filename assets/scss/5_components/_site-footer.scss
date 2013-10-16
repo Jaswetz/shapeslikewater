@@ -2,18 +2,193 @@
 =            $Footer            =
 ===============================*/
 
+/*==========  Top Footer  ==========*/
+
 .site-footer
 {
-	.bottom
+	.top_wrap
 	{
-		ul,
-		li
+		background: $b-color;
+
+		.top
 		{
-			@extend %ul-reset;
+			@extend %soft--top;
+			@extend %soft--bottom;
+
+			@include mq(med-and-up)
+			{
+				padding-right: 10%;
+				padding-left: 10%;
+			}
 		}
 	}
 }
 
 
+/*==========  Bottom Footer ==========*/
+
+.bottom_wrap
+{
+	background: $gray-darker;
+
+	.bottom
+	{
+		@extend %soft-half--top;
+		@extend %soft-half--bottom;
+
+		@include mq(med-and-down)
+		{
+			.copywrite, ul.social
+			{
+				margin: 0 auto;
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		@include mq(med-and-up)
+		{
+			.copywrite
+			{
+				position: relative;
+				top: $base-spacing-unit-px * .32;
+				top: $base-spacing-unit * .32;
+				float: left;
+			}
+
+			ul.social
+			{
+				float: right;
+			}
+		}
+
+		ul,
+		li
+		{
+			@extend %ul-reset;
+		}
+
+		.copywrite
+		{
+			font-size: $base-spacing-unit * .5;
+		}
+	}
+}
+
+.bottom
+{
+	ul.social
+	{
+		@extend %nav;
+
+		> li
+		{
+			i, a
+			{
+				@extend %default-trans;
+				@extend .epsilon;
+				@include transition-duration(.2s);
+			}
+
+			&:first-child a
+			{
+				margin: 0;
+			}
+
+			a
+			{
+				@include border-radius($default-border-radius);
+				display: block;
+				margin:0;
+				margin-left: $base-spacing-unit-px * .7;
+				margin-left: $base-spacing-unit * .7;
+				padding: $base-spacing-unit-px * .5;
+				padding: ($base-spacing-unit * .2) ($base-spacing-unit * .4);
+				border: 1px solid rgba($b-color, 0);
+				color: tint($gray-darker, 25%);
+
+				&:hover, &:focus
+				{
+					@include border-radius(50%);
+					border: 1px solid $b-color;
+					color: $b-color;
+				}
+
+			}
+		}
+	}
+}
 
 
+/*==========  Contact Form  ==========*/
+
+// Combine reused button and form styles
+input[type="text"],
+input[type="email"],
+textarea,
+.site-footer form button[type="submit"]
+{
+	@include border-radius($default-border-radius);
+	@extend %default-trans;
+	width: 100%;
+	border: $btnBorderWidth solid $form-border-color;
+	color: $white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea
+{
+	@include single-box-shadow(none);
+    @include box-shadow
+    (
+	    0 -$btnBorderWidth 0 lighten($form-color, 2) inset,
+	    0 $btnBorderWidth 0 lighten($form-color, 1) inset
+    );
+	padding: ($base-spacing-unit * .4) ($base-spacing-unit * .3);
+	outline: none;
+	border: none;
+	border: $btnBorderWidth solid $form-border-color;
+	background: $form-color;
+
+	&:hover
+	{
+		border-color: darken($form-border-color, 3);
+	}
+
+	&:active
+	{
+		border-color: darken($form-border-color, 5);
+	}
+
+	&:focus
+	{
+		background: darken($white, 10%);
+		color: $gray-dark;
+		text-align: left;
+	}
+}
+
+
+/*==========  Button  ==========*/
+
+.site-footer form button[type="submit"]
+{
+	@extend %btn;
+	@include filter-gradient(tint($b-color, 2%), shade($b-color, 5%), vertical); // IE6-8
+	@include background(linear-gradient(top, tint($b-color, 2%), shade($b-color, 5%)));
+	@include single-box-shadow(tint($b-color, 12%), 0, $btnBorderWidth, 0, 0, inset);
+	text-shadow: 0 1px shade($orange, 15%);
+	letter-spacing: 1px;
+	font-size: 1.2rem;
+	line-height: 3;
+	text-decoration: none;
+
+	&:hover,
+	&:active
+	{
+		@include filter-gradient(tint($b-color, 4%), shade($b-color, 7%), vertical); // IE6-8
+		@include background(linear-gradient(top, tint($b-color, 4%), shade($b-color, 7%)));
+		border: $btnBorderWidth solid shade($b-color, 5%);
+	}
+}

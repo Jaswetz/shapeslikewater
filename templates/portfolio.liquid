@@ -2,22 +2,38 @@
 {% block content %}
 
 	{% include "hero--portfolio" %}
-	<div class="row">
-		<h2>Portfolio</h2>
-		<p>Some examples of my work.</p>
 
-		<h3>Design</h3>
-		<article>
-			<h4>Project 1</h4>
-			<figure class="large-12 columns">
-				<img src="http://placehold.it/1000x25 0&amp;text=[ Ex 1 ]">
-			</figure>
-		</article>
-		<article>
-			<h4>Project 2</h4>
-			<figure class="large-12 columns">
-				<img src="http://placehold.it/1000x25 0&amp;text=[ Ex 1 ]">
-			</figure>
-		</article>
+	<div class="row">
+		<div class="columns">
+		<h2>Design Examples</h2>
+
+		<ul class="small-block-grid-2 imglist js-imglist">
+  			<li><img src="{{ "img_design1--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design1--small@2x.jpg 2x, ../assets/img/img_design1.jpg 415w, ../assets/img/img_design1@2x.jpg 415w 2x" height="548" width="825"></li>
+			<li><img src="{{ "img_design2--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design2--small@2x.jpg 2x, ../assets/img/img_design2.jpg 415w, ../assets/img/img_design2@2x.jpg 415w 2x" height="548" width="825"></li>
+			<li><img src="{{ "img_design3--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design3--small@2x.jpg 2x, ../assets/img/img_design3.jpg 415w, ../assets/img/img_design3@2x.jpg 415w 2x" height="548" width="825"></li>
+			<li><img src="{{ "img_design4--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design4--small@2x.jpg 2x, ../assets/img/img_design4.jpg 415w, ../assets/img/img_design4@2x.jpg 415w 2x" height="548" width="825"></li>
+  		</ul>
+  		</div>
 	</div>
+
+	<article class="row">
+			<h2 class="columns">Projects</h2>
+			<figure class="large-5 columns">
+				<img src="http://placehold.it/825x567">
+			</figure>
+			<div class="large-7 columns">
+				<h2>Project 1</h2>
+				{{ 2 | lorem_ipsum }}
+			</div>
+	</article>
+
+	<article class="row">
+		<div class="large-7 columns">
+			<h2>Project 1</h2>
+			{{ 2 | lorem_ipsum }}
+		</div>
+		<figure class="large-5 columns">
+			<img src="http://placehold.it/825x567">
+		</figure>
+	</article>
 {% endblock %}

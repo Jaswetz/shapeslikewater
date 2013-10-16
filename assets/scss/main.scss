@@ -30,7 +30,7 @@
 @import "2_generic/clearfix";
 @import "2_generic/media-query";
 @import "2_generic/accessibility";
-@import "2_generic/transitions";
+@import "2_generic/styles";
 @import "2_generic/glowing-effect";
 
 
@@ -44,6 +44,7 @@
 @import "3_base/images";
 @import "3_base/links";
 @import "3_base/lists";
+@import "3_base/forms";
 
 
 /*==========  Templates  ==========*/
@@ -60,8 +61,12 @@
 
 /*==========  Components  ==========*/
 
+@import "5_components/forms";
+@import "5_components/notifications";
+@import "5_components/hr";
 @import "5_components/site-header";
 @import "5_components/site-footer";
 @import "5_components/hero";
 @import "5_components/home";
 @import "5_components/section";
+@import "5_components/portfolio";

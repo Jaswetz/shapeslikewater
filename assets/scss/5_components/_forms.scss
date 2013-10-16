@@ -1,0 +1,52 @@
+/*==============================
+=            $FORMS            =
+==============================*/
+
+::-webkit-input-placeholder {
+   color: $place-holder-text;
+   opacity: 0.8;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $place-holder-text;
+   opacity: 0.8;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $place-holder-text;
+   opacity: 0.8;
+}
+
+:-ms-input-placeholder {
+   color: $place-holder-text;
+   opacity: 0.8;
+}
+
+form
+{
+	position: relative;
+}
+
+label
+{
+	display: block;
+	cursor: pointer;
+}
+
+fieldset
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+textarea
+{
+	height: auto;
+}
+
+select
+{
+  width: 100%;
+}
+

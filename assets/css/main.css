@@ -37,6 +37,18 @@
 /*===============================
 =            $Colors            =
 ===============================*/
+ /*================================
+=            $Spacing            =
+================================*/
+/*=============================
+=            $Type            =
+=============================*/
+/*==============================
+=            $Forms            =
+==============================*/
+ /*================================
+=            $Buttons            =
+================================*/
 /*==========  Vendors  ==========*/
 meta.foundation-mq-small {
   font-family: "only screen and (min-width: 768px)";
@@ -51,48 +63,6 @@ meta.foundation-mq-medium {
 meta.foundation-mq-large {
   font-family: "only screen and (min-width:1440px)";
   width: 1440px;
-}
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  font-size: 100%;
-}
-
-body {
-  background: white;
-  color: #222222;
-  padding: 0;
-  margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-  position: relative;
-  cursor: default;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-img,
-object,
-embed {
-  max-width: 100%;
-  height: auto;
-}
-
-object,
-embed {
-  height: 100%;
 }
 
 img {
@@ -2973,55 +2943,55 @@ a .icon-flip-vertical:before {
 .tera {
   font-size: 117px;
   font-size: 6.5rem;
-  margin-bottom: 0.25385rem;
+  margin-bottom: 0.24615rem;
 }
 
 .giga {
   font-size: 90px;
   font-size: 5rem;
-  margin-bottom: 0.33rem;
+  margin-bottom: 0.32rem;
 }
 
 .mega {
   font-size: 72px;
   font-size: 4rem;
-  margin-bottom: 0.4125rem;
+  margin-bottom: 0.4rem;
 }
 
 .alpha {
   font-size: 60px;
   font-size: 3.33333rem;
-  margin-bottom: 0.495rem;
+  margin-bottom: 0.48rem;
 }
 
 .beta {
   font-size: 48px;
   font-size: 2.66667rem;
-  margin-bottom: 0.61875rem;
+  margin-bottom: 0.6rem;
 }
 
 .gamma, h1 {
   font-size: 36px;
   font-size: 2rem;
-  margin-bottom: 0.825rem;
+  margin-bottom: 0.8rem;
 }
 
-.delta, h2 {
+.delta, h2, .skills h4 {
   font-size: 24px;
   font-size: 1.33333rem;
-  margin-bottom: 1.2375rem;
+  margin-bottom: 1.2rem;
 }
 
-.epsilon, h3 {
+.epsilon, h3, .bottom ul.social > li i, .bottom ul.social > li a {
   font-size: 21px;
   font-size: 1.16667rem;
-  margin-bottom: 1.41429rem;
+  margin-bottom: 1.37143rem;
 }
 
 .zeta, h4 {
   font-size: 18px;
   font-size: 1rem;
-  margin-bottom: 1.65rem;
+  margin-bottom: 1.6rem;
 }
 
 /*==========  Generic  ==========*/
@@ -3054,14 +3024,61 @@ a .icon-flip-vertical:before {
 /* *
  * Add/remove margins
    ================================================== */
+.about hr {
+  margin-top: 18px !important;
+  margin-top: 1.65rem !important;
+}
+
 .about img, .skills img {
   margin-bottom: 18px !important;
   margin-bottom: 1.65rem !important;
 }
 
+.hero--portfolio h2 {
+  margin-left: 18px !important;
+  margin-left: 1.65rem !important;
+}
+
+.notification {
+  margin-top: 18px !important;
+  margin-top: 1.65rem !important;
+  margin-bottom: 18px !important;
+  margin-bottom: 1.65rem !important;
+}
+
+.form-fields > li {
+  margin-bottom: 9px !important;
+  margin-bottom: 0.825rem !important;
+}
+
 /* *
  * Add/remove paddings
    ================================================== */
+.skills > div {
+  padding: 18px !important;
+  padding: 1.65rem !important;
+}
+
+.site-footer .top_wrap .top {
+  padding-top: 18px !important;
+  padding-top: 1.65rem !important;
+}
+
+.site-footer .top_wrap .top {
+  padding-bottom: 18px !important;
+  padding-bottom: 1.65rem !important;
+}
+
+.bottom_wrap .bottom {
+  padding-top: 9px !important;
+  padding-top: 0.825rem !important;
+}
+
+.bottom_wrap .bottom {
+  padding-bottom: 9px !important;
+  padding-bottom: 0.825rem !important;
+}
+
 /**
  * Pull items full width of `%island` parents.
  */
@@ -3073,8 +3090,8 @@ a .icon-flip-vertical:before {
 }
 
 /*==========  Reset UL/LI  ==========*/
-.site-footer .bottom ul,
-.site-footer .bottom li {
+.bottom_wrap .bottom ul,
+.bottom_wrap .bottom li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3115,12 +3132,71 @@ a .icon-flip-vertical:before {
  * Hide content off-screen without resorting to `display:none;`, also provide
  * breakpoint specific hidden elements.
  */
-a {
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+.about h3 {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+ /*===============================
+=            $STYLES            =
+===============================*/
+/*==========  Transitions  ==========*/
+a, .site-header .logo .outer, .site-header .logo .inner, .site-header .logo .triangle, .bottom ul.social > li i, .bottom ul.social > li a, input[type="text"],
+input[type="email"],
+textarea,
+.site-footer form button[type="submit"] {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/*==========  Shapes  ==========*/
+.site-header .logo .inner {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/*==========  Element Styles  ==========*/
+.about img {
+  border: 1px solid #e9ebee;
+  background: white;
+  padding: 3.6px;
+  padding: 0.33rem;
+}
+
+/*==========  Text Styles  ==========*/
+.about em {
+  color: #ff917e;
+}
+
+/*==========  Patterns  ==========*/
+.about {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkQAKMIPbL1+/+i4sKMYI5MAAATXkEBOSqHasAAAAASUVORK5CYII=) repeat;
+  padding-top: 36px;
+  padding-top: 3.3rem;
+}
+
+/*==========  Borders  ==========*/
+.skills h4 {
+  border-bottom: 1px solid #d4d8dd;
 }
 
 /*==========  Base  ==========*/
@@ -3558,7 +3634,7 @@ table {
 =            $Type            =
 =============================*/
 html {
-  font: normal 112.5%/1.65 serif;
+  font: normal 114%/1.6 serif;
 }
 
 /**
@@ -3571,12 +3647,22 @@ body {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 1 */
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #454545;
+  background: snow;
   padding: 0;
   margin: 0;
   position: relative;
   cursor: default;
+}
+
+small {
+  font-size: 0.75em;
+  line-height: 2.475em;
+}
+
+p {
+  line-height: 1.6;
 }
 
 /*===================================
@@ -3613,11 +3699,6 @@ img {
 /**
  * Non-fluid images if you specify `width` and/or `height` attributes.
  */
-img[width],
-img[height] {
-  max-width: none;
-}
-
 /**
  * Images in `figure` elements.
  */
@@ -3688,6 +3769,74 @@ li > ol {
   list-style-type: decimal;
 }
 
+/*==============================
+=            $Forms            =
+==============================*/
+fieldset {
+  padding: 18px;
+  padding: 1.65rem;
+}
+
+/**
+ * Group sets of form fields in a list, e.g.:
+ *
+   <ul class=form-fields>
+       <li>
+           <label />
+           <input />
+       </li>
+       <li>
+           <label />
+           <select />
+       </li>
+       <li>
+           <label />
+           <input />
+       </li>
+   </ul>
+ *
+ */
+.form-fields {
+  list-style: none;
+  margin: 0;
+}
+.form-fields > li {
+  display: block;
+}
+.form-fields > li:last-child {
+  margin-bottom: 0;
+}
+
+/*==========  Labels  ==========*/
+/**
+ * Define a `.label` class as well as a `label` element. This means we can apply
+ * label-like styling to meta-labels for groups of options where a `label`
+ * element is not suitable, e.g.:
+ *
+   <li>
+       <span class=label>Select an option below:</span>
+       <ul class="multi-list  four-cols">
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+label,
+.label {
+  display: block;
+}
+
 /*==========  Templates  ==========*/
 /*==================================
 =            $Word-wrap            =
@@ -3715,12 +3864,13 @@ body {
 =            $Navigation            =
 ===================================*/
 /*==========  Nav abstraction - http://goo.gl/QjtO6  ==========*/
-.site-header .nav-wrap nav {
+.site-header .nav-wrap nav, .bottom ul.social {
   margin-left: 0;
   list-style: none;
 }
-.site-header .nav-wrap nav > li,
-.site-header .nav-wrap nav > li > a {
+.site-header .nav-wrap nav > li, .bottom ul.social > li,
+.site-header .nav-wrap nav > li > a,
+.bottom ul.social > li > a {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -3729,6 +3879,7 @@ body {
 /*==========  Divided nav abstraction (extends .nav)  ==========*/
 /*==========  Blocked nav abstraction (extends .nav)  ==========*/
 /*==========  Stacked nav abstraction (extends .nav)  ==========*/
+/*==========  Take up 100% of the width of it's parent  ==========*/
 /*================================
 =            $Buttons            =
 ================================*/
@@ -3746,6 +3897,54 @@ body {
  *    of space to the left and right, as padding, to keep consistent spacing.
  * 8. Don’t allow buttons to have underlines; it kinda ruins the illusion.
  */
+.site-footer form button[type="submit"] {
+  display: inline-block;
+  /* [1] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-right: 18px;
+  /* [7] */
+  padding-right: 1.65rem;
+  /* [7] */
+  padding-bottom: 0;
+  /* [6] */
+  padding-left: 18px;
+  /* [7] */
+  padding-left: 1.65rem;
+  border: none;
+  /* [6] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  border: 2px solid #cc4f38;
+  color: #454545;
+  background: tomato;
+  font-size: 100%;
+  /* [4] */
+  font-family: inherit;
+  /* [4] */
+  line-height: 2;
+  /* [7] */
+  cursor: pointer;
+  /* [5] */
+  /* [7] */
+}
+.site-footer form button[type="submit"], .site-footer form button[type="submit"]:hover {
+  text-decoration: none;
+  /* [9] */
+}
+.site-footer form button[type="submit"]:active, .site-footer form button[type="submit"]:focus {
+  outline: none;
+}
+.site-footer form button[type="submit"]:hover, .site-footer form button[type="submit"]:focus {
+  border-color: tomato;
+  background: tomato;
+  color: white;
+}
+
 /*==========  Sizes  ==========*/
 /**
  * Button size modifiers.
@@ -3805,45 +4004,199 @@ body {
 }
 
 /*==========  Components  ==========*/
+/*==============================
+=            $FORMS            =
+==============================*/
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+  opacity: 0.8;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+  opacity: 0.8;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+form {
+  position: relative;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  height: auto;
+}
+
+select {
+  width: 100%;
+}
+
+ /*======================================
+=            $Notifications            =
+======================================*/
+.notification {
+  display: none;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.notification--success {
+  background: #b1cc00;
+  color: #586600;
+}
+
+.notification--error {
+  background: #e35d5b;
+  color: #712e2d;
+}
+
+.notification--fill,
+.notification--email,
+.notification--server {
+  background: #e8b000;
+  color: #745800;
+}
+
+/*===========================
+=            $hr            =
+===========================*/
+hr {
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(112, 128, 144, 0)), color-stop(50%, rgba(112, 128, 144, 0.3)), color-stop(100%, rgba(112, 128, 144, 0)));
+  background: -webkit-linear-gradient(left, rgba(112, 128, 144, 0), rgba(112, 128, 144, 0.3), rgba(112, 128, 144, 0));
+  background: -moz-linear-gradient(left, rgba(112, 128, 144, 0), rgba(112, 128, 144, 0.3), rgba(112, 128, 144, 0));
+  background: -o-linear-gradient(left, rgba(112, 128, 144, 0), rgba(112, 128, 144, 0.3), rgba(112, 128, 144, 0));
+  background: linear-gradient(left, rgba(112, 128, 144, 0), rgba(112, 128, 144, 0.3), rgba(112, 128, 144, 0));
+  margin: 0;
+  height: 1px;
+  border: 0;
+}
+
 /*===============================
 =            $Header            =
 ===============================*/
 .site-header {
+  -webkit-box-shadow: 0px 0px 0.5rem 0px rgba(183, 191, 199, 0.5), 0px 0 3px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 0.5rem 0px rgba(183, 191, 199, 0.5), 0px 0 3px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0.5rem 0px rgba(183, 191, 199, 0.5), 0px 0 3px 0px rgba(0, 0, 0, 0.1);
   height: 72px;
   height: 6.6rem;
-  background: gray;
+  border-bottom: 1px solid #d4d8dd;
+  background: white;
+  /*==========  $LOGO  ==========*/
 }
-.site-header .logo {
-  display: inline-block;
-  float: left;
-  text-align: center;
+.lt-ie9 .site-header {
+  height: 45px;
+  height: 4.125rem;
+}
+@media screen and (min-width: 26em) {
+  .site-header {
+    height: 45px;
+    height: 4.125rem;
+  }
+}
+.site-header .site-header_decoration {
+  width: 100%;
+  height: 3.6px;
+  height: 0.33rem;
+  background: tomato;
 }
 .lt-ie9 .site-header .logo {
   width: 30%;
-  text-align: inherit;
 }
 @media screen and (min-width: 26em) {
   .site-header .logo {
     width: 30%;
-    text-align: inherit;
   }
 }
+.site-header .logo a {
+  display: block;
+  margin-top: 7.2px;
+  margin-top: 0.66rem;
+}
+@media screen and (max-width: 26em) {
+  .site-header .logo a {
+    margin-right: auto;
+    margin-left: auto;
+    width: 18px;
+    width: 1.65rem;
+  }
+}
+.site-header .logo .logo-wrapper {
+  position: relative;
+}
+.site-header .logo .outer, .site-header .logo .inner, .site-header .logo .triangle {
+  position: absolute;
+  border: 1px solid #b7bfc7;
+}
+.site-header .logo .outer {
+  width: 40px;
+  height: 40px;
+}
+.site-header .logo .inner {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  margin: 4px 2px 2px 4px;
+  width: 32px;
+  height: 32px;
+}
+.site-header .logo .triangle {
+  margin-top: 10px;
+  margin-left: 11px;
+  width: 0px;
+  height: 0px;
+  border-width: 0 9px 17px 9px;
+  border-style: solid;
+  border-color: transparent transparent #b7bfc7 transparent;
+}
+.site-header .logo:hover .triangle, .site-header .logo:active .triangle, .site-header .logo:focus .triangle {
+  border-color: transparent transparent tomato transparent;
+}
+.site-header .logo:hover .inner, .site-header .logo:hover .outer, .site-header .logo:active .inner, .site-header .logo:active .outer, .site-header .logo:focus .inner, .site-header .logo:focus .outer {
+  border-color: transparent;
+}
 .site-header .nav-wrap {
+  margin-top: 36px;
+  margin-top: 3.3rem;
   text-align: center;
 }
 .lt-ie9 .site-header .nav-wrap {
+  margin-top: 1.8px;
+  margin-top: 0.165rem;
   width: 70%;
   text-align: inherit;
 }
 @media screen and (min-width: 26em) {
   .site-header .nav-wrap {
+    margin-top: 1.8px;
+    margin-top: 0.165rem;
     width: 70%;
     text-align: inherit;
   }
-}
-.site-header .nav-wrap nav li > a {
-  display: block;
-  padding: 0.165rem 0.825rem 0.165rem 0.825rem;
 }
 .lt-ie9 .site-header .nav-wrap nav {
   float: right;
@@ -3855,29 +4208,250 @@ body {
     padding: 0.825rem 0.825rem 0.825rem 0.825rem;
   }
 }
+.site-header .nav-wrap nav li > a {
+  display: block;
+  padding: 0.165rem 0.825rem 0.165rem 0.825rem;
+  color: #b7bfc7;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  border: 1px solid #d4d8dd;
+  text-decoration: none;
+  margin-left: 7.2px;
+  margin-left: 0.66rem;
+}
+.site-header .nav-wrap nav li > a:hover, .site-header .nav-wrap nav li > a:active {
+  color: #e8632c;
+}
 
 /*===============================
 =            $Footer            =
 ===============================*/
+/*==========  Top Footer  ==========*/
+.site-footer .top_wrap {
+  background: tomato;
+}
+.lt-ie9 .site-footer .top_wrap .top {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+@media screen and (min-width: 50em) {
+  .site-footer .top_wrap .top {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+.lt-ie9 .site-footer .top_wrap .top {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+@media screen and (min-width: 50em) {
+  .site-footer .top_wrap .top {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+/*==========  Bottom Footer ==========*/
+.bottom_wrap {
+  background: #212121;
+}
+@media screen and (max-width: 50em) {
+  .bottom_wrap .bottom .copywrite, .bottom_wrap .bottom ul.social {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+}
+.lt-ie9 .bottom_wrap .bottom .copywrite {
+  position: relative;
+  top: 5.76px;
+  top: 0.528rem;
+  float: left;
+}
+.lt-ie9 .bottom_wrap .bottom ul.social {
+  float: right;
+}
+@media screen and (min-width: 50em) {
+  .bottom_wrap .bottom .copywrite {
+    position: relative;
+    top: 5.76px;
+    top: 0.528rem;
+    float: left;
+  }
+  .bottom_wrap .bottom ul.social {
+    float: right;
+  }
+}
+.lt-ie9 .bottom_wrap .bottom .copywrite {
+  position: relative;
+  top: 5.76px;
+  top: 0.528rem;
+  float: left;
+}
+.lt-ie9 .bottom_wrap .bottom ul.social {
+  float: right;
+}
+@media screen and (min-width: 50em) {
+  .bottom_wrap .bottom .copywrite {
+    position: relative;
+    top: 5.76px;
+    top: 0.528rem;
+    float: left;
+  }
+  .bottom_wrap .bottom ul.social {
+    float: right;
+  }
+}
+.bottom_wrap .bottom .copywrite {
+  font-size: 0.825rem;
+}
+
+.bottom ul.social > li i, .bottom ul.social > li a {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.bottom ul.social > li:first-child a {
+  margin: 0;
+}
+.bottom ul.social > li a {
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  display: block;
+  margin: 0;
+  margin-left: 12.6px;
+  margin-left: 1.155rem;
+  padding: 9px;
+  padding: 0.33rem 0.66rem;
+  border: 1px solid rgba(255, 99, 71, 0);
+  color: #585858;
+}
+.bottom ul.social > li a:hover, .bottom ul.social > li a:focus {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid tomato;
+  color: tomato;
+}
+
+/*==========  Contact Form  ==========*/
+input[type="text"],
+input[type="email"],
+textarea,
+.site-footer form button[type="submit"] {
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  border: 0.1rem solid #ff5f43;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: -0.1rem 0 #ff755c inset, 0 0.1rem 0 #ff7057 inset;
+  -moz-box-shadow: -0.1rem 0 #ff755c inset, 0 0.1rem 0 #ff7057 inset;
+  box-shadow: -0.1rem 0 #ff755c inset, 0 0.1rem 0 #ff7057 inset;
+  padding: 0.66rem 0.495rem;
+  outline: none;
+  border: none;
+  border: 0.1rem solid #ff5f43;
+  background: #ff6c52;
+}
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border-color: #ff5233;
+}
+input[type="text"]:active,
+input[type="email"]:active,
+textarea:active {
+  border-color: #ff4929;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  background: #e6e6e6;
+  color: #454545;
+  text-align: left;
+}
+
+/*==========  Button  ==========*/
+.site-footer form button[type="submit"] {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFF664A', endColorstr='#FFF25E43');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff664a), color-stop(100%, #f25e43));
+  background: -webkit-linear-gradient(top, #ff664a, #f25e43);
+  background: -moz-linear-gradient(top, #ff664a, #f25e43);
+  background: -o-linear-gradient(top, #ff664a, #f25e43);
+  background: linear-gradient(top, #ff664a, #f25e43);
+  -webkit-box-shadow: inset 0 0.1rem 0 0 #ff755d;
+  -moz-box-shadow: inset 0 0.1rem 0 0 #ff755d;
+  box-shadow: inset 0 0.1rem 0 0 #ff755d;
+  text-shadow: 0 1px #c55425;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  line-height: 3;
+  text-decoration: none;
+}
+.site-footer form button[type="submit"]:hover, .site-footer form button[type="submit"]:active {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFE694E', endColorstr='#FFED5C42');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fe694e), color-stop(100%, #ed5c42));
+  background: -webkit-linear-gradient(top, #fe694e, #ed5c42);
+  background: -moz-linear-gradient(top, #fe694e, #ed5c42);
+  background: -o-linear-gradient(top, #fe694e, #ed5c42);
+  background: linear-gradient(top, #fe694e, #ed5c42);
+  border: 0.1rem solid #f25e43;
+}
+
 /*=================================
 =            $hero            =
 =================================*/
 .hero {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   margin-top: 72px;
   margin-top: 6.6rem;
   padding-top: 36px;
   padding-top: 3.3rem;
   width: 100%;
   height: 275px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   background-color: tomato;
 }
+.lt-ie9 .hero {
+  margin-top: 45px;
+  margin-top: 4.125rem;
+}
+@media screen and (min-width: 26em) {
+  .hero {
+    margin-top: 45px;
+    margin-top: 4.125rem;
+  }
+}
 .hero h2 {
-  color: white;
   font-size: 3.3rem;
+}
+.hero h2,
+.hero em {
+  color: white;
 }
 
 @media screen and (max-width: 26em) {
@@ -3946,11 +4520,11 @@ body {
 }
 .hero--home h2,
 .hero--home em {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   display: block;
   margin: 0 auto;
   max-width: 432px;
   max-width: 39.6rem;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 50em) {
   .hero--home h2,
@@ -4038,25 +4612,21 @@ body {
     height: 9.9rem;
   }
 }
-.hero--portfolio h2 {
-  margin-left: 18px;
-  margin-left: 1.65rem;
-}
 .lt-ie9 .hero--portfolio h2 {
   display: block;
-  max-width: 153px;
-  max-width: 14.025rem;
   padding-left: 3.6px;
   padding-left: 0.33rem;
+  max-width: 153px;
+  max-width: 14.025rem;
   background-color: tomato;
 }
 @media screen and (min-width: 26em) {
   .hero--portfolio h2 {
     display: block;
-    max-width: 153px;
-    max-width: 14.025rem;
     padding-left: 3.6px;
     padding-left: 0.33rem;
+    max-width: 153px;
+    max-width: 14.025rem;
     background-color: tomato;
   }
 }
@@ -4065,13 +4635,59 @@ body {
 =            $Home            =
 =============================*/
 /*==========  About  ==========*/
+.about {
+  position: relative;
+}
+.about p.gamma {
+  font-style: italic;
+  line-height: 1.3;
+}
+.about p.large {
+  font-size: 1.155rem;
+}
+.about img {
+  width: 100%;
+}
+.about small {
+  color: #b7bfc7;
+}
+.about span {
+  padding-left: 1.8px;
+  padding-left: 0.165rem;
+  color: #e8632c;
+}
+.about hr {
+  width: 100%;
+  bottom: 0;
+}
+
 /*==========  Skills  ==========*/
+.skills h4 {
+  text-transform: uppercase;
+  padding-bottom: 7.2px;
+  padding-bottom: 0.66rem;
+}
+.skills .copy {
+  min-height: 12em;
+}
+.skills img {
+  max-width: 80%;
+}
+.skills .design > .copy > h4 {
+  color: #e35d5b;
+}
+.skills .develop > .copy > h4 {
+  color: #4ca2df;
+}
+.skills .ux > .copy > h4 {
+  color: #e8b000;
+}
+
 /*================================
 =            Sections            =
 ================================*/
 .about,
-.skills,
-.hero {
+.skills {
   margin-bottom: 36px;
   margin-bottom: 3.3rem;
 }
@@ -4102,4 +4718,13 @@ body {
     margin-bottom: 36px;
     margin-bottom: 3.3rem;
   }
+}
+
+/*=======================================
+=            $Portfolio Page            =
+=======================================*/
+/*==========  Design Section  ==========*/
+.imglist img[width],
+.imglist img[height] {
+  width: 100%;
 }

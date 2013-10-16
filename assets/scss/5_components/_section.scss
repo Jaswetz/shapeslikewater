@@ -4,15 +4,19 @@
 
 @mixin section-spacing
 {
-	margin-bottom: $base-spacing-unit-px * 2;
-	margin-bottom: $base-spacing-unit * 2;
+	margin-bottom: $section-spacing-px;
+	margin-bottom: $section-spacing;
+}
+
+%section-spacing
+{
+	@include section-spacing;
 }
 
 .about,
-.skills,
-.hero
+.skills
 {
-	@include section-spacing;
+	@extend %section-spacing;
 }
 
 .masthead

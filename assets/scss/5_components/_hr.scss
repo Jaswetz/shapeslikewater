@@ -1,0 +1,11 @@
+/*===========================
+=            $hr            =
+===========================*/
+
+hr
+{
+	@include background(linear-gradient(left, rgba(112,128,144,0), rgba(112,128,144,.3), rgba(112,128,144,.0)));
+	margin: 0;
+	height: 1px;
+	border: 0;
+}

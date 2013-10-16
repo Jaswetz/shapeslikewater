@@ -1,0 +1,36 @@
+;/*======================================
+=            $Notifications            =
+======================================*/
+
+.notification
+{
+	@extend %push--ends;
+	display: none;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	line-height: 2;
+}
+
+.notification--success
+{
+	background: $green;
+	color: shade($green, 50%);
+}
+
+.notification--error
+{
+	background: $red;
+	color: shade($red, 50%);
+}
+
+.notification--fill,
+.notification--email,
+.notification--server
+{
+	background: $yellow;
+	color: shade($yellow, 50%);
+}
+
+
+

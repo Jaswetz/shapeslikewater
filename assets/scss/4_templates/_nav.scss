@@ -70,3 +70,22 @@
 
 %nav-stacked { @include obj-nav-stacked }
 
+
+/*==========  Take up 100% of the width of it's parent  ==========*/
+@mixin obj-nav-fit
+{
+    display:table;
+    width:100%;
+
+    > li
+    {
+        display:table-cell;
+
+        > a
+        {
+            display:block;
+        }
+    }
+}
+
+%nav-fit { @include obj-nav-fit }

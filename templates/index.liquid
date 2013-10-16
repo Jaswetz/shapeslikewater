@@ -2,39 +2,48 @@
 
     {% include "hero--home" %}
 
-	<section class="row about">
-		<figure class="img about-img large-6 columns">
-			<img src="http://placehold.it/1298x865&amp;text=[ Jason Swetzoff ]">
-		</figure>
-		<div class="img about-text large-6 columns">
-			<h3>About Me</h3>
-            <p class="large">A kid playing with his Legos, that's how I feel.</p>
-            <p><em>I'm Jason</em> and I've got a passion for creating. I enjoy the process as much as I do the final product<span>*</span>. I believe in iteration and communication. I'm self-taught and never stop learning. My goal is to meet awesome people, create excellent things, and continue growing.</p>
-            <small><span>*</span>Even though a project is never truly finished.</small>
+	<section class="about">
+		<div class="row">
+			<figure class="img about-img large-6 columns">
+				<img src="{{ "img_me--small.jpg" | asset_url }}" alt="Jason Swetzoff"  srcset="../assets/img/img_me--small@2x.jpg 2x, ../assets/img/img_me.jpg 415w, ../assets/img/img_me@2x.jpg 415w 2x">
+			</figure>
+			<div class="about-text large-6 columns">
+	            <h3>About Me</h3>
+	            <p class="gamma">A kid playing with his Legos, that's how I feel.</p>
+	            <p class="large"><em>I'm Jason</em> and I've got a passion for creating. I enjoy the process as much as I do the final product<span>*</span>. I believe in iteration and communication. I'm self-taught and never stop learning. My goal is to meet awesome people, create excellent things, and continue growing.</p>
+	            <small><span>*</span>Even though a project is never truly finished.</small>
+			</div>
 		</div>
+		<hr>
 	</section>
 
 	<section class="row skills">
-		<div class="skills-design large-4 columns">
+		<div class="skills-design large-4 columns design">
 			<figure class="">
-				<img src="http://placehold.it/400x472&amp;text=[ Design ]">
+				<img src="{{ "icn_dsgn--small.png" | asset_url }}" alt="Icon: Design"  srcset="../assets/img/icn_dsgn--small@2x.png 2x, ../assets/img/icn_dsgn.png 415w, ../assets/img/icn_dsgn@2x.png 415w 2x">
 			</figure>
-			<h4>Design</h4>
-			<p>I design aesthetically pleasing, readable, browsable, and responsive content. I like to use an iterative process, I start fantastical and then strip the design down to only the optimal.</p>
+			<div class="copy">
+				<h4>Design</h4>
+				<p>I design aesthetically pleasing, readable, browsable, and responsive content. I like to use an iterative process, I start fantastical and then strip the design down to only the optimal.</p>
+			</div>
 		</div>
-		<div class="large-4 small-12 columns">
+		<div class="large-4 small-12 columns develop">
 			<figure>
-				<img src="http://placehold.it/400x472&amp;text=[ Develop ]">
+				<img src="{{ "icn_dvlp--small.png" | asset_url }}" alt="Icon: Developer"  srcset="../assets/img/icn_dvlp--small@2x.png 2x, ../assets/img/icn_dvlp.png 415w, ../assets/img/icn_dvlp@2x.png 415w 2x">
 			</figure>
-			<h4>Front-End</h4>
-			<p>I build accessible interactive content that solves problems. I keep code semantic and optimized by following best practices.</p>
+			<div class="copy">
+				<h4>Front-End</h4>
+				<p>I build accessible interactive content that solves problems. I keep code semantic and optimized by following best practices.</p>
+			</div>
 		</div>
-		<div class="skills-ux large-4 columns">
+		<div class="skills-ux large-4 columns ux">
 			<figure>
-				<img src="http://placehold.it/400x472&amp;text=[ UX ]">
+					<img src="{{ "icn_ux--small.png" | asset_url }}" alt="Icon: UX"  srcset="../assets/img/icn_ux--small@2x.png 2x, ../assets/img/icn_ux.png 415w, ../assets/img/icn_ux@2x.png 415w 2x">
 			</figure>
-			<h4>User Experience</h4>
-			<p>I strive to create a better relationship between humans and technology by creating an intuitive experience. My goal is not to dazzle or force the user but allow the user to follow their own flow.</p>
+			<div class="copy">
+				<h4>User Experience</h4>
+				<p>I strive to create a better relationship between humans and technology by creating an intuitive experience. My goal is not to dazzle or force the user but allow the user to follow their own flow.</p>
+			</div>
 		</div>
 	</section>
 {% endblock %}

@@ -4,19 +4,107 @@
 
 /*==========  About  ==========*/
 
-.about img
+.about
 {
-	@extend %push--bottom;
+	@extend %section-pattern-1;
+	position: relative;
+
+	p.gamma
+	{
+		font-style: italic;
+		line-height: 1.3;
+	}
+
+	p.large
+	{
+		font-size: $base-spacing-unit * .7;
+	}
+
+	h3
+	{
+		@extend %accessibility;
+	}
+
+	img
+	{
+		@extend %push--bottom;
+		@extend %img-border;
+		width: 100%;
+	}
+
+	small
+	{
+		color: $s-color_tint;
+	}
+
+	em
+	{
+  		@extend %text-em;
+	}
+
+	span
+	{
+		padding-left: $base-spacing-unit-px * .1;
+		padding-left: $base-spacing-unit * .1;
+		color: $orange;
+	}
+
+	hr
+	{
+	  	@extend %push--top;
+	  	width: 100%;
+	  	bottom: 0;
+	}
 }
 
 
 /*==========  Skills  ==========*/
 
-.skills img
+.skills
 {
-	@extend %block-center;
-	@extend %push--bottom;
+	h4
+	{
+		@extend %border-bottom;
+		text-transform: uppercase;
+		@extend .delta;
+		padding-bottom: $base-spacing-unit-px * .4;
+		padding-bottom: $base-spacing-unit * .4;
+	}
+
+	.copy
+	{
+		// Keep cols same height
+		min-height: 12em;
+	}
+
+	img
+	{
+		@extend %block-center;
+		@extend %push--bottom;
+		max-width: 80%;
+	}
+
+	> div
+	{
+		@extend %soft;
+	}
+
+	.design > .copy > h4
+	{
+		color: $red;
+	}
+
+	.develop > .copy > h4
+	{
+		color: $blue;
+	}
+
+	.ux > .copy > h4
+	{
+		color: $yellow;
+	}
 }
+
 
 
 

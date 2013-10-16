@@ -9,15 +9,14 @@
         <title>{% block title %}Jason Swetzoff{% endblock %}</title>
         <meta name="description" content="The website of Jason Swetzoff, a UI/UX Designer and Front-End Developer.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
         {{ "main.css" | asset_url | stylesheet_tag }}
         <!-- TODO: Complete this project :) -->
         <!-- TODO: Add `<head>` information -->
     </head>
     <body class="wrapper">
         {% include "site-header" %}
-        <div class="container">
-            {% block content %}{% endblock %}
-        </div>
+        {% block content %}{% endblock %}
         {% include "site-footer" %}
 
         {% include "scripts" %}

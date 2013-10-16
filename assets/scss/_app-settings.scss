@@ -2,7 +2,7 @@
 =            $Type            =
 =============================*/
 
-$body-font-family: sans-serif;
+$body-font-family: 'Open Sans', sans-serif;;
 $header-font-family: 'audimatbold';
 
 /*===============================
@@ -13,6 +13,18 @@ $header-font-family: 'audimatbold';
 $b-color              		: tomato ;
 $b-highlight 				: tint($b-color, 30%) ;
 $b-dim 						: shade($b-color, 20%) ;
+
+$s-color 					: slategray;
+$s-color_tint 				: tint($s-color, 50%);
+$s-color_shade 				: shade($s-color, 40%);
+
+$body-color    				: snow;
+
+// Logo
+$logo-color     			: $s-color_tint;
+
+// Border Colors
+$border-color    			: tint($s-color, 70%);
 
 // Text Highlight
 $highlight-text-color       : tint($b-color, 80%);;
@@ -28,3 +40,41 @@ $link-accent				: tint($link-color, 30%) ;
 $link-hover 				: darken($link-color, 10) ;
 $link-visited   			: $link-color ;
 $link-focus					: darken($link-visited, 10) ;
+
+
+;/*================================
+=            $Spacing            =
+================================*/
+
+// Section
+$section-spacing-px: ($base-spacing-unit-px * 2);
+$section-spacing: ($base-spacing-unit * 2);
+
+
+/*=============================
+=            $Type            =
+=============================*/
+
+$line-height: 1.6;
+$font-size: 114; // percentage value (16 * 112.5% = 18px)
+
+
+/*==============================
+=            $Forms            =
+==============================*/
+
+$form-color: rgb(255, 108, 82);
+$form-border-color: darken($form-color, 3);
+$place-holder-text:  $white;
+
+
+;/*================================
+=            $Buttons            =
+================================*/
+
+$primaryBtnBckgrnd          : $gray-lighter;
+$btnBorderStyle				: solid;
+$btnBorderWidth				: .1rem;
+
+
+

@@ -1,44 +1,65 @@
 <footer class="site-footer">
-    <div class="top row">
-        <form method="POST" class="contact" id="contact">
-            <fieldset class="contact-inner">
-                <label for="visitors-name">
-                    <span class="label">Name?</span>
-                    <div class="icn-wrap">
-                        <i class="icon-user"></i>
-                    </div>
-                    <input placeholder="Name?" type="text" name="visitors-name" id="visitors-name" tabindex="1" required="">
-                </label>
-                <label for="visitors-email">
-                        <span class="label">eMail?</span>
-                        <div class="icn-wrap">
-                            <i class="icon-mail"></i>
-                        </div>
-                        <input type="email" placeholder="eMail?" name="visitors-email" tabindex="2" id="visitors-email" required="">
-                </label>
-                <label for="visitors-message">
-                    <span class="label">What's Up?</span>
-                    <textarea name="visitors-message" placeholder="What up?" tabindex="3" id="visitors-message" required=""></textarea>
-                </label>
-                <span id="notification" class="message- success">Success! Thanks for your message.</span>
-                <p class="contact-submit">
-                  <button name="submit" type="submit" id="contact-submit" class="button" tabindex="4">Send Email</button>
-                </p>
-            </fieldset>
-        </form>
+    <div class="top_wrap">
+        <div class="row">
+            <div class="top columns small-12">
+                <form method="POST" class="contact" id="contact">
+                    <fieldset class="contact-inner">
+                        <ul class="form-fields">
+                            <li>
+                                <label for="visitors-name">
+                                    <input placeholder="Name?" type="text" name="visitors-name" id="visitors-name" tabindex="1" required="">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="visitors-email">
+                                    <input type="email" placeholder="eMail?" name="visitors-email" tabindex="2" id="visitors-email" required="">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="visitors-message">
+                                    <textarea name="visitors-message" placeholder="What up?" tabindex="3" id="visitors-message" required=""></textarea>
+                                </label>
+                            </li>
+                        </ul>
+
+                        <div class="notification--success notification">Success! Thanks for your message.</div>
+
+                        <div class="notification--email notification">Please make sure the email field is filled out.</div>
+
+                        <div class="notification--fill notification">Please make sure all fields are filled out.</div>
+
+                        <div class="notification--error notification">Message could not be sent</div>
+
+                        <div class="notification--server notification">No connection to server.</div>
+
+
+
+
+
+                        <p class="contact-submit">
+                         <button name="submit" type="submit" id="contact-submit" class="button" tabindex="4">Send Email</button>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="bottom row">
-        <ul class="social">
-            <li><a href="https://twitter.com/Jaswetz"><i class="icon-twitter"></i></a></li>
-            <li><a href="http://dribbble.com/Jaswetz"><i class="icon-dribbble"></i></a></li>
-            <li><a href="https://github.com/Jaswetz"><i class="icon-github"></i></a></li>
-            <li><a href="http://www.linkedin.com/in/swetzoff"><i class="icon-linkedin"></i></a></li>
-            <li>
-                <address>
-                    <a id="contact-link" href="mailto:swetzoff@gmail.com"><i class="icon-envelope"></i></a>
-                </address>
-            </li>
-        </ul>
-        <p class="copywrite">© 2013 Jason Swetzoff</p>
+    <div class="bottom_wrap">
+        <div class="row">
+            <div class="bottom columns">
+                <ul class="social">
+                    <li><a href="https://twitter.com/Jaswetz"><i class="icon-twitter"></i></a></li>
+                    <li><a href="http://dribbble.com/Jaswetz"><i class="icon-dribbble"></i></a></li>
+                    <li><a href="https://github.com/Jaswetz"><i class="icon-github"></i></a></li>
+                    <li><a href="http://www.linkedin.com/in/swetzoff"><i class="icon-linkedin"></i></a></li>
+                    <li>
+                        <address>
+                            <a id="contact-link" href="mailto:swetzoff@gmail.com"><i class="icon-envelope"></i></a>
+                        </address>
+                    </li>
+                </ul>
+                <p class="copywrite">© 2013 Jason Swetzoff</p>
+            </div>
+        </div>
     </div>
 </footer>

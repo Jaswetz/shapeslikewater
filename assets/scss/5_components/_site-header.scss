@@ -2,35 +2,121 @@
 =            $Header            =
 ===============================*/
 
-$site-header-height-px: ($base-spacing-unit-px * 4);
-$site-header-height: ($base-spacing-unit * 4);
+$site-header-small-height-px: ($base-spacing-unit-px * 4);
+$site-header-small-height: ($base-spacing-unit * 4);
+
+$site-header-large-height-px: ($base-spacing-unit-px * 2.5);
+$site-header-large-height: ($base-spacing-unit * 2.5);
 
 .site-header
 {
 	@extend %fixed-header;
-	height: $site-header-height-px;
-	height: $site-header-height;
-	background: $gray;
+	@include box-shadow(0px 0px .5rem 0px transparentize($s-color_tint, .5), 0px 0 3px 0px rgba(0, 0, 0, 0.1));
+	height: $site-header-small-height-px;
+	height: $site-header-small-height;
+	border-bottom: 1px solid $border-color;
+	background: $white;
+
+	@include mq(small-and-up)
+	{
+		height: $site-header-large-height-px;
+		height: $site-header-large-height;
+	}
+
+	.site-header_decoration
+	{
+		width: 100%;
+		height: $base-spacing-unit-px * .2;
+		height: $base-spacing-unit * .2;
+		background: $b-color;
+	}
+
+/*==========  $LOGO  ==========*/
 
 	.logo
 	{
-		display: inline-block;
-		float: left;
-		text-align: center;
-
 		@include mq(small-and-up)
 	    {
 			width: 30%;
-			text-align: inherit;
 	    }
+
+		a
+		{
+			display: block;
+			margin-top: $base-spacing-unit-px * .4;
+			margin-top: $base-spacing-unit * .4;
+
+			@include mq(small-and-down)
+		    {
+		    	margin-right: auto;
+		    	margin-left: auto;
+		    	width: $base-spacing-unit-px;
+		    	width: $base-spacing-unit;
+		    }
+		}
+
+		.logo-wrapper
+		{
+			position: relative;
+		}
+
+		.outer, .inner, .triangle
+		{
+			@extend %default-trans;
+			position: absolute;
+			border: 1px solid $logo-color;
+		}
+
+		.outer
+		{
+			width: 40px;
+			height: 40px;
+		}
+
+		.inner
+		{
+			@include transition-delay(.5s);
+			@extend %circle;
+			margin: 4px 2px 2px 4px;
+			width: 32px;
+			height: 32px;
+		}
+
+		.triangle
+		{
+			margin-top: 10px;
+			margin-left: 11px;
+			width: 0px;
+			height: 0px;
+			border-width: 0 9px 17px 9px;
+			border-style: solid;
+			border-color: transparent transparent $logo-color transparent;
+		}
+
+		&:hover, &:active, &:focus
+		{
+			.triangle
+			{
+				border-color: transparent transparent $b-color transparent;
+			}
+
+			.inner, .outer
+			{
+				border-color: transparent;
+			}
+		}
 	}
 
 	.nav-wrap
 	{
+		margin-top: $base-spacing-unit-px * 2;
+		margin-top: $base-spacing-unit * 2;
 		text-align: center;
 
 		@include mq(small-and-up)
 	    {
+			margin-top: $base-spacing-unit-px * .1;
+			margin-top: $base-spacing-unit * .1;
 			width: 70%;
 			text-align: inherit;
 	    }
@@ -39,16 +125,28 @@ $site-header-height: ($base-spacing-unit * 4);
 		{
 			@extend %nav;
 
-			li > a
-			{
-				display: block;
-				padding: ($base-spacing-unit * .1) ($base-spacing-unit * .5 ) ($base-spacing-unit * .1) ($base-spacing-unit * .5 );
-			}
-
 			@include mq(small-and-up)
 	    	{
 				float: right;
 				padding: ($base-spacing-unit * .5) ($base-spacing-unit * .5 ) ($base-spacing-unit * .5) ($base-spacing-unit * .5 );
+			}
+
+			li > a
+			{
+				display: block;
+				padding: ($base-spacing-unit * .1) ($base-spacing-unit * .5 ) ($base-spacing-unit * .1) ($base-spacing-unit * .5 );
+				color: $s-color_tint;
+				@include border-radius($default-border-radius);
+				border: 1px solid $border-color;
+				text-decoration: none;
+				margin-left: $base-spacing-unit-px * .4;
+				margin-left: $base-spacing-unit * .4;
+
+				&:hover,
+				&:active
+				{
+					color: $orange;
+				}
 			}
 		}
 	}
