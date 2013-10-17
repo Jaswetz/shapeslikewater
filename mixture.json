@@ -1,13 +1,20 @@
 {
   "debug": true,
-  "domain": null,
+  "domain": "null",
   "lintScripts": true,
   "modelSource": null,
+  "ftpSettings": {
+  "host": "shapeslikewater.com",
+  "port": 21,
+  "username": "jasonds",
+  "password": "rj*ADr2p ",
+  "path": "staging"
+  },
   "preprocessorLocations": "assets",
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
   "projectDescription": "The website of Jason Swetzoff, a UI/UX Designer and Front-End Developer.",
-  "projectName": "shapeslikewater2",
+  "projectName": "Shapes Like Water",
   "serverHostname": null,
   "serverPort": null,
   "remoteDebugPort": 8081,
@@ -18,3 +25,4 @@
   "type": "mixture",
   "useCompass": true
 }
+

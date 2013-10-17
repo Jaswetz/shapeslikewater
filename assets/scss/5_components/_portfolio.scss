@@ -2,14 +2,99 @@
 =            $Portfolio Page            =
 =======================================*/
 
+.design-ex h2,
+.projects h2
+{
+	@extend %header--underlined;
+	color: $b-color;
+}
+
 /*==========  Design Section  ==========*/
+
+.design-ex
+{
+	@extend %section-pattern-1;
+}
 
 .imglist
 {
+	@extend %soft--bottom;
+
 	img[width],
 	img[height]
 	{
 		width: 100%;
 	}
+
+	img
+	{
+		@extend %img-border;
+	}
 }
 
+
+/*==========  Projects  ==========*/
+
+.project > .columns
+{
+	background: $white;
+	border: 1px solid shade(snow, 1%);
+	@extend %soft--top;
+}
+
+.projects
+{
+	h2
+	{
+		@extend %push--bottom;
+	}
+
+	img
+	{
+		@extend %img-border;
+	}
+
+	h3
+	{
+		color: $s-color;
+		@extend .gamma;
+	}
+
+	h4
+	{
+		display: inline-block;
+		background: $s-color;
+		Color: $white;
+		padding: $base-spacing-unit-px * .1 $base-spacing-unit-px * .4;
+		padding: $base-spacing-unit * .1 $base-spacing-unit * .4;
+		margin: 0;
+		@extend %push-half--bottom;
+	}
+
+	ul
+	{
+		@extend %ul-reset;
+		@extend %push--bottom;
+
+		li
+		{
+			display: inline;
+		}
+	}
+
+	.url,
+	.date
+	{
+		border-top: 1px solid shade(snow, 1%);
+		font-weight: 200;
+		line-height: 2;
+		color: $s-color;
+		text-align: center;
+	}
+
+	.url
+	{
+		border-right: 1px solid shade(snow, 1%);
+
+	}
+}

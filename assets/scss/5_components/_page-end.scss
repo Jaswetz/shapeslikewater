@@ -1,0 +1,41 @@
+$btn-trans-color: lighten($s-color, 30%);
+
+.page-end
+{
+	.page-end_color
+	{
+		@include border-radius($default-border-radius);
+		background: #dbdee3;
+		@extend %soft--ends;
+		@extend %soft--sides;
+	}
+
+	p
+	{
+		text-align: center;
+		@extend .delta;
+		font-weight: 400;
+		color: shade($s-color, 25%);
+		@extend %soft-half--ends;
+	}
+
+	.btn
+	{
+		display: block;
+		@extend %default-trans;
+		text-align: center;
+		@extend .epsilon;
+
+		background: lighten($s-color, 30%);
+		@include box-shadow( 0 4px darken($btn-trans-color, 5) );
+		padding-top: $base-spacing-unit-px * .5;
+		padding-top: $base-spacing-unit * .5;
+		padding-bottom: $base-spacing-unit-px * .5;
+		padding-bottom: $base-spacing-unit * .5;
+
+		// Font Styles
+		color: white;
+		text-shadow: 0 -1px shade($btn-trans-color, 2);
+		font-weight: 600;
+	}
+}

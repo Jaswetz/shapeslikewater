@@ -3,37 +3,98 @@
 
 	{% include "hero--portfolio" %}
 
-	<div class="row">
-		<div class="columns">
-		<h2>Design Examples</h2>
+	<section class="design-ex">
+		<div class="row">
+			<div class="columns small-12 large-4">
+				<h2>Design Examples</h2>
+			</div>
+		</div>
+		<div class="row design-ex_grid">
+			<div class="columns">
+				<ul class="small-block-grid-2 imglist js-imglist">
+		  			<li><a class="js-mp-imageLink" href="{{ "design_om.png" | asset_url }}"><img src="{{ "img_design1--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design1--small@2x.jpg 2x, ../assets/img/img_design1.jpg 415w, ../assets/img/img_design1@2x.jpg 415w 2x" height="548" width="825"></a></li>
+					<li><a class="js-mp-imageLink" href="{{ "design_bower.png" | asset_url }}"><img src="{{ "img_design2--small.jpg" | asset_url }}" alt="Bower Website	"  srcset="../assets/img/img_design2--small@2x.jpg 2x, ../assets/img/img_design2.jpg 415w, ../assets/img/img_design2@2x.jpg 415w 2x" height="548" width="825"></a></li>
+					<li><a class="js-mp-imageLink" href="{{ "design_econofy.png" | asset_url }}"><img src="{{ "img_design3--small.jpg" | asset_url }}" alt="Econofy Website"  srcset="../assets/img/img_design3--small@2x.jpg 2x, ../assets/img/img_design3.jpg 415w, ../assets/img/img_design3@2x.jpg 415w 2x" height="548" width="825"></a></li>
+					<li><a class="js-mp-imageLink" href="{{ "design_jerhel.png" | asset_url }}"><img src="{{ "img_design4--small.jpg" | asset_url }}" alt="Jerhel Website"  srcset="../assets/img/img_design4--small@2x.jpg 2x, ../assets/img/img_design4.jpg 415w, ../assets/img/img_design4@2x.jpg 415w 2x" height="548" width="825"></a></li>
+		  		</ul>
+	  		</div>
+	  		<hr>
+		</div>
+	</section>
 
-		<ul class="small-block-grid-2 imglist js-imglist">
-  			<li><img src="{{ "img_design1--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design1--small@2x.jpg 2x, ../assets/img/img_design1.jpg 415w, ../assets/img/img_design1@2x.jpg 415w 2x" height="548" width="825"></li>
-			<li><img src="{{ "img_design2--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design2--small@2x.jpg 2x, ../assets/img/img_design2.jpg 415w, ../assets/img/img_design2@2x.jpg 415w 2x" height="548" width="825"></li>
-			<li><img src="{{ "img_design3--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design3--small@2x.jpg 2x, ../assets/img/img_design3.jpg 415w, ../assets/img/img_design3@2x.jpg 415w 2x" height="548" width="825"></li>
-			<li><img src="{{ "img_design4--small.jpg" | asset_url }}" alt="Overall Murals Website"  srcset="../assets/img/img_design4--small@2x.jpg 2x, ../assets/img/img_design4.jpg 415w, ../assets/img/img_design4@2x.jpg 415w 2x" height="548" width="825"></li>
-  		</ul>
-  		</div>
-	</div>
+	<section class="projects">
 
-	<article class="row">
-			<h2 class="columns">Projects</h2>
+		<div class="row">
+			<div class="columns small-12 large-4">
+				<h2>Projects</h2>
+			</div>
+		</div>
+
+		<article class="row project">
+			<div class="columns small-12">
+				<h3>Jerhel Redesign</h3>
+				<figure class="large-5 columns">
+					<a class="js-mp-imageLink" href="{{ "design_jerhel.png" | asset_url }}"><img src="{{ "img_design4--small.jpg" | asset_url }}" alt="Jerhel Website"  srcset="../assets/img/img_design4--small@2x.jpg 2x, ../assets/img/img_design4.jpg 415w, ../assets/img/img_design4@2x.jpg 415w 2x" height="548" width="825"></a>
+				</figure>
+				<div class="large-7 columns project_copy">
+
+					<div class="tasks project_facts">
+						<h4>Tasks</h4>
+						<ul>
+							<li>Redesign Jerhel's website. </li>
+							<li>Make all interactions more user friendly. </li>
+							<li>Make website usable on all devices. </li>
+						</ul>
+					</div>
+
+					<div class="jobs project_facts">
+						<h4>Jobs</h4>
+						<ul>
+							<li>Front-End, </li>
+							<li>Design, </li>
+							<li>UX</li>
+						</ul>
+					</div>
+
+					<div class="Technologies project_facts">
+						<h4>Technologies</h4>
+						<ul>
+							<li><a href="http://angularjs.org/">AngularJS</a>, </li>
+							<li><a href="http://laravel.com/">laravel</a>, </li>
+							<li><a href="http://compass-style.org/">Compass</a>, </li>
+							<li><a href="http://sass-lang.com/">Sass</a>, </li>
+							<li><a href="http://en.wikipedia.org/wiki/Responsive_web_design">Responsive Design</a> </li>
+						</ul>
+					</div>
+				</div>
+
+					<footer class="row">
+						<div class="url columns small-6">Not Live</div>
+						<div class="date columns small-6">Current</div>
+					</footer>
+			</div>
+		</article>
+
+<!-- 		<article class="row project">
+			<div class="large-7 columns">
+				<h3>Project 1</h3>
+				{{ 2 | lorem_ipsum }}
+			</div>
 			<figure class="large-5 columns">
 				<img src="http://placehold.it/825x567">
 			</figure>
-			<div class="large-7 columns">
-				<h2>Project 1</h2>
-				{{ 2 | lorem_ipsum }}
-			</div>
-	</article>
+		</article> -->
 
-	<article class="row">
-		<div class="large-7 columns">
-			<h2>Project 1</h2>
-			{{ 2 | lorem_ipsum }}
+	</section>
+
+	<div class="page-end row">
+		<div class="page-end_wrap columns">
+			<div class="page-end_color">
+		    <p>Thanks for stopping by! Why don't you check out my resume?</p>
+		    <div class="row">
+		    	<a href="/resume" class="btn large-3 columns small-centered">My Resume <span>→</span></a>
+		    </div>
+		    </div>
 		</div>
-		<figure class="large-5 columns">
-			<img src="http://placehold.it/825x567">
-		</figure>
-	</article>
+	</div>
 {% endblock %}

@@ -8,4 +8,9 @@ hr
 	margin: 0;
 	height: 1px;
 	border: 0;
+
+	//Styles
+	@extend %push--top;
+  	width: 100%;
+  	bottom: 0;
 }

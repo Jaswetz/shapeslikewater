@@ -59,3 +59,15 @@
 {
 	border-bottom: 1px solid $border-color;
 }
+
+
+/*==========  Headers  ==========*/
+
+%header--underlined
+{
+	@extend %border-bottom;
+	text-transform: uppercase;
+	@extend .delta;
+	padding-bottom: $base-spacing-unit-px * .4;
+	padding-bottom: $base-spacing-unit * .4;
+}

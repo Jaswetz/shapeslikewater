@@ -48,13 +48,6 @@
 		padding-left: $base-spacing-unit * .1;
 		color: $orange;
 	}
-
-	hr
-	{
-	  	@extend %push--top;
-	  	width: 100%;
-	  	bottom: 0;
-	}
 }
 
 
@@ -64,11 +57,7 @@
 {
 	h4
 	{
-		@extend %border-bottom;
-		text-transform: uppercase;
-		@extend .delta;
-		padding-bottom: $base-spacing-unit-px * .4;
-		padding-bottom: $base-spacing-unit * .4;
+		@extend %header--underlined;
 	}
 
 	.copy

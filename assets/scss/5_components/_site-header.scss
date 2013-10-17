@@ -37,11 +37,13 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 	{
 		@include mq(small-and-up)
 	    {
-			width: 30%;
+			width: 10%;
 	    }
 
 		a
 		{
+			width: 40px;
+			height: 40px;
 			display: block;
 			margin-top: $base-spacing-unit-px * .4;
 			margin-top: $base-spacing-unit * .4;
@@ -65,6 +67,16 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 			@extend %default-trans;
 			position: absolute;
 			border: 1px solid $logo-color;
+		}
+
+		.inner
+		{
+			border-color: tint($logo-color, 60%);
+		}
+
+		.outer
+		{
+			border-color: tint($logo-color, 80%);
 		}
 
 		.outer
@@ -109,15 +121,15 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 
 	.nav-wrap
 	{
-		margin-top: $base-spacing-unit-px * 2;
-		margin-top: $base-spacing-unit * 2;
+		margin-top: $base-spacing-unit-px * .5;
+		margin-top: $base-spacing-unit * .5;
 		text-align: center;
 
 		@include mq(small-and-up)
 	    {
 			margin-top: $base-spacing-unit-px * .1;
 			margin-top: $base-spacing-unit * .1;
-			width: 70%;
+			width: 90%;
 			text-align: inherit;
 	    }
 
@@ -128,24 +140,40 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 			@include mq(small-and-up)
 	    	{
 				float: right;
-				padding: ($base-spacing-unit * .5) ($base-spacing-unit * .5 ) ($base-spacing-unit * .5) ($base-spacing-unit * .5 );
+				padding-top: $base-spacing-unit-px * .5;
+				padding-top: $base-spacing-unit * .5 ;
 			}
 
 			li > a
 			{
 				display: block;
-				padding: ($base-spacing-unit * .1) ($base-spacing-unit * .5 ) ($base-spacing-unit * .1) ($base-spacing-unit * .5 );
 				color: $s-color_tint;
 				@include border-radius($default-border-radius);
-				border: 1px solid $border-color;
 				text-decoration: none;
 				margin-left: $base-spacing-unit-px * .4;
 				margin-left: $base-spacing-unit * .4;
 
-				&:hover,
-				&:active
+				@include mq(small-and-up)
 				{
+					border: 1px solid $border-color;
+					padding: ($base-spacing-unit * .1) ($base-spacing-unit * .5 ) ($base-spacing-unit * .1) ($base-spacing-unit * .5 );
+				}
+
+				&:hover
+				{
+					@include single-box-shadow($black-vhigh, 0, 3px, $default-box-shadow-blur, $default-box-shadow-spread, $default-box-shadow-inset);
+					@include background(linear-gradient(top, $white, shade($white, 1%)));
 					color: $orange;
+				}
+
+
+				&:active,
+				&.current
+				{
+					@include single-box-shadow(none);
+					@include background(linear-gradient(bottom, $white, shade($white, 1%)));
+					color: $orange;
+					border-color: transparentize($border-color, .5);
 				}
 			}
 		}
