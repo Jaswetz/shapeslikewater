@@ -5214,9 +5214,11 @@ textarea:focus {
   border: 1px solid #fcf7f7;
 }
 
-.projects img {
-  margin-bottom: 18px;
-  margin-bottom: 1.65rem;
+@media screen and (max-width: 50em) {
+  .projects img {
+    margin-bottom: 18px;
+    margin-bottom: 1.65rem;
+  }
 }
 .projects h3 {
   color: slategrey;

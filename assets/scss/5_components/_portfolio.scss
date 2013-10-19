@@ -52,8 +52,12 @@
 	img
 	{
 		@extend %img-border;
-		margin-bottom: $base-spacing-unit-px;
-		margin-bottom: $base-spacing-unit;
+
+		@include mq(med-and-down)
+		{
+			margin-bottom: $base-spacing-unit-px;
+			margin-bottom: $base-spacing-unit;
+		}
 	}
 
 	h3
