@@ -32,10 +32,22 @@ $btn-trans-color: lighten($s-color, 30%);
 		padding-top: $base-spacing-unit * .5;
 		padding-bottom: $base-spacing-unit-px * .5;
 		padding-bottom: $base-spacing-unit * .5;
+		@include border-radius($default-border-radius);
 
 		// Font Styles
 		color: white;
 		text-shadow: 0 -1px shade($btn-trans-color, 2);
 		font-weight: 600;
+
+	    &:hover
+	    {
+	       background: lighten( $btn-trans-color, 2% );
+	    }
+
+	    &:active
+	    {
+	       box-shadow: none;
+	       top: 3px;
+	    }
 	}
 }

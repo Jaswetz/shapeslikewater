@@ -100,12 +100,18 @@
 				@include border-radius($default-border-radius);
 				display: block;
 				margin:0;
-				margin-left: $base-spacing-unit-px * .7;
-				margin-left: $base-spacing-unit * .7;
+				margin-left: $base-spacing-unit-px * .6;
+				margin-left: $base-spacing-unit * .6;
 				padding: $base-spacing-unit-px * .5;
 				padding: ($base-spacing-unit * .2) ($base-spacing-unit * .4);
 				border: 1px solid rgba($b-color, 0);
 				color: tint($gray-darker, 25%);
+
+				@include mq(small-and-down)
+				{
+					margin-left: $base-spacing-unit-px * .2;
+					margin-left: $base-spacing-unit * .2;
+				}
 
 				&:hover, &:focus
 				{

@@ -13,12 +13,6 @@
 	height: 275px;
 	background-color: $b-color;
 
-	@include mq(small-and-up)
-	{
-		margin-top: $site-header-large-height-px;
-		margin-top: $site-header-large-height;
-	}
-
 	h2
 	{
 		font-size: $base-spacing-unit * 2;

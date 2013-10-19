@@ -52,6 +52,8 @@
 	img
 	{
 		@extend %img-border;
+		margin-bottom: $base-spacing-unit-px;
+		margin-bottom: $base-spacing-unit;
 	}
 
 	h3

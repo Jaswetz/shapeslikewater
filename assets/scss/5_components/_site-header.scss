@@ -2,11 +2,8 @@
 =            $Header            =
 ===============================*/
 
-$site-header-small-height-px: ($base-spacing-unit-px * 4);
-$site-header-small-height: ($base-spacing-unit * 4);
-
-$site-header-large-height-px: ($base-spacing-unit-px * 2.5);
-$site-header-large-height: ($base-spacing-unit * 2.5);
+$site-header-small-height-px: ($base-spacing-unit-px * 2.5);
+$site-header-small-height: ($base-spacing-unit * 2.5);
 
 .site-header
 {
@@ -16,12 +13,6 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 	height: $site-header-small-height;
 	border-bottom: 1px solid $border-color;
 	background: $white;
-
-	@include mq(small-and-up)
-	{
-		height: $site-header-large-height-px;
-		height: $site-header-large-height;
-	}
 
 	.site-header_decoration
 	{
@@ -35,10 +26,18 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 
 	.logo
 	{
+
+	   	@include mq(small-and-down)
+	    {
+			position: relative;
+			left: - $base-spacing-unit-px * .2;
+			left: - $base-spacing-unit * .2;
+		}
+
 		@include mq(small-and-up)
 	    {
 			width: 10%;
-	    }
+		}
 
 		a
 		{
@@ -47,19 +46,6 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 			display: block;
 			margin-top: $base-spacing-unit-px * .4;
 			margin-top: $base-spacing-unit * .4;
-
-			@include mq(small-and-down)
-		    {
-		    	margin-right: auto;
-		    	margin-left: auto;
-		    	width: $base-spacing-unit-px;
-		    	width: $base-spacing-unit;
-		    }
-		}
-
-		.logo-wrapper
-		{
-			position: relative;
 		}
 
 		.outer, .inner, .triangle
@@ -123,7 +109,14 @@ $site-header-large-height: ($base-spacing-unit * 2.5);
 	{
 		margin-top: $base-spacing-unit-px * .5;
 		margin-top: $base-spacing-unit * .5;
-		text-align: center;
+		text-align: right;
+
+		@include mq(small-and-down)
+	    {
+			position: absolute;
+			top: $base-spacing-unit-px * .3;
+			top: $base-spacing-unit * .3;
+	    }
 
 		@include mq(small-and-up)
 	    {
